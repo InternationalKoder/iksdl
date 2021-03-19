@@ -3,7 +3,7 @@ bin/
 CMakeFiles/
 lib/
 include/iksdl/iksdl_export.hpp
-*.cmake
+/*.cmake
 CMakeCache.txt
 CMakeLists.txt.*
 Makefile
