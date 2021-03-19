@@ -1,0 +1,47 @@
+var annotated_dup =
+[
+    [ "iksdl", "namespaceiksdl.html", [
+      [ "priv", "namespaceiksdl_1_1priv.html", [
+        [ "Channels", "classiksdl_1_1priv_1_1_channels.html", "classiksdl_1_1priv_1_1_channels" ]
+      ] ],
+      [ "AbstractEvent", "classiksdl_1_1_abstract_event.html", "classiksdl_1_1_abstract_event" ],
+      [ "AbstractRectangle", "classiksdl_1_1_abstract_rectangle.html", "classiksdl_1_1_abstract_rectangle" ],
+      [ "AbstractRectangleArray", "classiksdl_1_1_abstract_rectangle_array.html", "classiksdl_1_1_abstract_rectangle_array" ],
+      [ "Color", "classiksdl_1_1_color.html", "classiksdl_1_1_color" ],
+      [ "Drawable", "classiksdl_1_1_drawable.html", "classiksdl_1_1_drawable" ],
+      [ "Event", "classiksdl_1_1_event.html", "classiksdl_1_1_event" ],
+      [ "EventHandler", "classiksdl_1_1_event_handler.html", "classiksdl_1_1_event_handler" ],
+      [ "EventSupport", "structiksdl_1_1_event_support.html", "structiksdl_1_1_event_support" ],
+      [ "FillRectangle", "classiksdl_1_1_fill_rectangle.html", "classiksdl_1_1_fill_rectangle" ],
+      [ "FillRectangleArray", "classiksdl_1_1_fill_rectangle_array.html", "classiksdl_1_1_fill_rectangle_array" ],
+      [ "Font", "classiksdl_1_1_font.html", "classiksdl_1_1_font" ],
+      [ "InvalidParameterException", "classiksdl_1_1_invalid_parameter_exception.html", null ],
+      [ "Keyboard", "classiksdl_1_1_keyboard.html", "classiksdl_1_1_keyboard" ],
+      [ "KeyboardEvent", "classiksdl_1_1_keyboard_event.html", "classiksdl_1_1_keyboard_event" ],
+      [ "Line", "classiksdl_1_1_line.html", "classiksdl_1_1_line" ],
+      [ "LineArray", "classiksdl_1_1_line_array.html", "classiksdl_1_1_line_array" ],
+      [ "Mouse", "classiksdl_1_1_mouse.html", "classiksdl_1_1_mouse" ],
+      [ "MouseButtonEvent", "classiksdl_1_1_mouse_button_event.html", "classiksdl_1_1_mouse_button_event" ],
+      [ "MouseMotionEvent", "classiksdl_1_1_mouse_motion_event.html", "classiksdl_1_1_mouse_motion_event" ],
+      [ "MouseWheelEvent", "classiksdl_1_1_mouse_wheel_event.html", "classiksdl_1_1_mouse_wheel_event" ],
+      [ "Music", "classiksdl_1_1_music.html", "classiksdl_1_1_music" ],
+      [ "Point", "classiksdl_1_1_point.html", "classiksdl_1_1_point" ],
+      [ "PointArray", "classiksdl_1_1_point_array.html", "classiksdl_1_1_point_array" ],
+      [ "Position", "classiksdl_1_1_position.html", "classiksdl_1_1_position" ],
+      [ "QuitEvent", "classiksdl_1_1_quit_event.html", "classiksdl_1_1_quit_event" ],
+      [ "Rect", "classiksdl_1_1_rect.html", "classiksdl_1_1_rect" ],
+      [ "Rectangle", "classiksdl_1_1_rectangle.html", "classiksdl_1_1_rectangle" ],
+      [ "RectangleArray", "classiksdl_1_1_rectangle_array.html", "classiksdl_1_1_rectangle_array" ],
+      [ "Renderer", "classiksdl_1_1_renderer.html", "classiksdl_1_1_renderer" ],
+      [ "RendererOptions", "classiksdl_1_1_renderer_options.html", "classiksdl_1_1_renderer_options" ],
+      [ "SdlException", "classiksdl_1_1_sdl_exception.html", null ],
+      [ "Size", "classiksdl_1_1_size.html", "classiksdl_1_1_size" ],
+      [ "Sound", "classiksdl_1_1_sound.html", "classiksdl_1_1_sound" ],
+      [ "Sprite", "classiksdl_1_1_sprite.html", "classiksdl_1_1_sprite" ],
+      [ "Text", "classiksdl_1_1_text.html", "classiksdl_1_1_text" ],
+      [ "Texture", "classiksdl_1_1_texture.html", "classiksdl_1_1_texture" ],
+      [ "Window", "classiksdl_1_1_window.html", "classiksdl_1_1_window" ],
+      [ "WindowEvent", "classiksdl_1_1_window_event.html", "classiksdl_1_1_window_event" ],
+      [ "WindowOptions", "classiksdl_1_1_window_options.html", "classiksdl_1_1_window_options" ]
+    ] ]
+];

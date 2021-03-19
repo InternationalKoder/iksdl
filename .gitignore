@@ -1,0 +1,9 @@
+.cmake/
+bin/
+CMakeFiles/
+lib/
+include/iksdl/iksdl_export.hpp
+*.cmake
+CMakeCache.txt
+CMakeLists.txt.*
+Makefile

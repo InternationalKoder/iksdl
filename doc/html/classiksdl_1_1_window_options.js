@@ -1,0 +1,26 @@
+var classiksdl_1_1_window_options =
+[
+    [ "WindowOptions", "classiksdl_1_1_window_options.html#ab203274788879658823f188342bf2bbd", null ],
+    [ "allowHighDpi", "classiksdl_1_1_window_options.html#a14bb5242961b886f26f575f71aab446a", null ],
+    [ "alwaysOnTop", "classiksdl_1_1_window_options.html#a027ef0264d72e262fa80107aa3236989", null ],
+    [ "borderless", "classiksdl_1_1_window_options.html#a5361d3ba2f63821abf98a947caf4aeba", null ],
+    [ "foreign", "classiksdl_1_1_window_options.html#a5ce9ccec8fc632a8eb8633ea51e7a07c", null ],
+    [ "fullScreen", "classiksdl_1_1_window_options.html#a9d0afd781fbc603cc40c57fa54bd1ca7", null ],
+    [ "fullscreenDesktop", "classiksdl_1_1_window_options.html#a6c777eb3e6649224a19e02cf7f9da596", null ],
+    [ "hidden", "classiksdl_1_1_window_options.html#a8dd2f445eb5ef29b5c55096bbeb3c85e", null ],
+    [ "inputFocus", "classiksdl_1_1_window_options.html#a21e1103dbf36c2b4b5bb1015b7f5d735", null ],
+    [ "inputGrabbed", "classiksdl_1_1_window_options.html#af43a7b1e680db303856b3b4d31b7d59b", null ],
+    [ "maximized", "classiksdl_1_1_window_options.html#a89fc2535a86c126d58600f9aa07189b2", null ],
+    [ "minimized", "classiksdl_1_1_window_options.html#a975e5420bbdb80863a13f4d8bbafc172", null ],
+    [ "mouseCapture", "classiksdl_1_1_window_options.html#a34bf45ce61a13d985249badd47248437", null ],
+    [ "mouseFocus", "classiksdl_1_1_window_options.html#a3524f1b1408a1c78400167afe964550d", null ],
+    [ "opengl", "classiksdl_1_1_window_options.html#a8471748364a1413072be81134de2ed24", null ],
+    [ "popupMenu", "classiksdl_1_1_window_options.html#a7eddd21f5631363079861e13f5e085e5", null ],
+    [ "resizable", "classiksdl_1_1_window_options.html#a141c0835a6f29ff88b5b16f689f40261", null ],
+    [ "shown", "classiksdl_1_1_window_options.html#a0f757dbf6f2d5302e73a213b6f67fb9d", null ],
+    [ "skipTaskBar", "classiksdl_1_1_window_options.html#af754a0456800cbd7cc99059164188749", null ],
+    [ "tooltip", "classiksdl_1_1_window_options.html#af4b218695bdc06feee9731a6236c09e5", null ],
+    [ "utility", "classiksdl_1_1_window_options.html#aac29917588b5a8df15b844c4d0df93c0", null ],
+    [ "vulkan", "classiksdl_1_1_window_options.html#af2a6a2c64e27dc0bffa87c4a1207f221", null ],
+    [ "Window", "classiksdl_1_1_window_options.html#a553f958a25683445088050a69d3de8e9", null ]
+];
