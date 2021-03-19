@@ -24,6 +24,7 @@
 #include "iksdl/InvalidParameterException.hpp"
 #include <SDL_ttf.h>
 #include <SDL.h>
+#include <utility>
 
 namespace iksdl
 {
