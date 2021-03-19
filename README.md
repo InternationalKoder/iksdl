@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
 
 Full documentation is available at http://internationalkoder.github.io/iksdl.
 
-It is also present in HTML in the `doc/` folder.
+It is also present in HTML in the `docs/` folder.
 
 ## Contribute
 
