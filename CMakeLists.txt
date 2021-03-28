@@ -22,7 +22,6 @@
 cmake_minimum_required(VERSION 3.12)
 
 project(iksdl VERSION 1.0 LANGUAGES CXX)
-set(CMAKE_DEBUG_POSTFIX -d)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 
 # Project files
@@ -129,6 +128,8 @@ set_target_properties(iksdl
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
+
+set_target_properties(iksdl PROPERTIES DEBUG_POSTFIX "-d")
 
 include(CheckIPOSupported)
 check_ipo_supported(RESULT ipo_supported)
