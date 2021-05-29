@@ -36,7 +36,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief Gathers the common code related to the drawing of rectangle arrays
+/// \brief Gathers the common code related to the drawing of rectangle arrays using \c int coordinates
 ///
 /// This is the recommended approach when drawing several rectangles.
 /// It is faster than drawing all the rectangles individually,

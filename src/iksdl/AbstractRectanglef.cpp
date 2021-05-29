@@ -20,25 +20,17 @@
  *
  */
 
-#include "iksdl/LineArray.hpp"
-#include <iterator>
+#include "iksdl/AbstractRectanglef.hpp"
 
 namespace iksdl
 {
-LineArray::LineArray(Color color) :
+AbstractRectanglef::AbstractRectanglef(const Rectf& rect, Color color) :
+    m_rect{ .x = rect.getX(), .y = rect.getY(), .w = rect.getWidth(), .h = rect.getHeight() },
     m_color(std::move(color))
 {}
 
-LineArray::LineArray(const std::vector<Positioni>& positions, Color color) :
+AbstractRectanglef::AbstractRectanglef(const Positionf& position, const Sizef& size, Color color) :
+    m_rect{ .x = position.getX(), .y = position.getY(), .w = size.getWidth(), .h = size.getHeight() },
     m_color(std::move(color))
-{
-    m_points.reserve(positions.size());
-    std::transform(positions.begin(), positions.end(), std::back_inserter(m_points), LineArray::positionToSdl);
-}
-
-void LineArray::draw(SDL_Renderer* const renderer) const
-{
-    SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
-    SDL_RenderDrawLines(renderer, m_points.data(), static_cast<int>(m_points.size()));
-}
+{}
 }

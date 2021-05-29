@@ -23,11 +23,10 @@
 #ifndef IKSDL_SPRITE_HPP
 #define IKSDL_SPRITE_HPP
 
-#include "iksdl/Drawable.hpp"
+#include "iksdl/BaseSprite.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Rect.hpp"
 #include "iksdl/Size.hpp"
-#include "iksdl/Texture.hpp"
 #include "iksdl/iksdl_export.hpp"
 #include <SDL.h>
 
@@ -35,16 +34,11 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief An image that can be drawn
+/// \brief An image that can be drawn using \c int coordinates
 /////////////////////////////////////////////////
-class Sprite : public Drawable
+class Sprite : public BaseSprite
 {
     public:
-
-        /////////////////////////////////////////////////
-        /// \brief Flipping modes for a sprite
-        /////////////////////////////////////////////////
-        enum class Flip { None, Horizontal, Vertical, Both };
 
         /////////////////////////////////////////////////
         /// \brief Constructor that sets the sprite at the given position
@@ -85,18 +79,7 @@ class Sprite : public Drawable
         ///
         /// \param delta Scaling factor to apply
         /////////////////////////////////////////////////
-        IKSDL_EXPORT void scale(const Sizef& delta);
-
-        /////////////////////////////////////////////////
-        /// \brief Rotate the sprite
-        ///
-        /// The rotation is relative to the current orientation.
-        ///
-        /// \param delta Angle difference to apply
-        ///
-        /// \see setRotation
-        /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void rotate(double delta) { m_rotation += delta; }
+        IKSDL_EXPORT virtual void scale(const Sizef& delta);
 
         /////////////////////////////////////////////////
         /// \brief Draw the sprite
@@ -142,7 +125,7 @@ class Sprite : public Drawable
         ///
         /// \param rect Area from the texture to draw
         /////////////////////////////////////////////////
-        IKSDL_EXPORT void setTextureRect(const Recti& rect);
+        IKSDL_EXPORT virtual void setTextureRect(const Recti& rect);
 
         /////////////////////////////////////////////////
         /// \brief Change the rotation of the sprite
@@ -161,13 +144,6 @@ class Sprite : public Drawable
         IKSDL_EXPORT void setCenter(const Positioni& center);
 
         /////////////////////////////////////////////////
-        /// \brief Flip the sprite
-        ///
-        /// \param flip Type of flip to apply
-        /////////////////////////////////////////////////
-        IKSDL_EXPORT void setFlip(Flip flip);
-
-        /////////////////////////////////////////////////
         /// \brief Use the full texture to draw the sprite
         /////////////////////////////////////////////////
         IKSDL_EXPORT void resetTextureRect();
@@ -179,16 +155,10 @@ class Sprite : public Drawable
 
     private:
 
-        const Texture* const m_texture; ///< Texture holding the image data
-        SDL_Rect m_rect;                ///< Position and size of the sprite
-        SDL_Rect m_textureRect;         ///< Position and size of the texture to draw
-        SDL_Rect* m_textureRectPtr;     ///< Pointer to texture rect, or nullptr to draw full texture
+        SDL_Rect m_rect; ///< Position and size of the sprite
 
-        Sizef m_scale;           ///< Sprite scale
-        double m_rotation;       ///< Sprite rotation
-        SDL_Point m_center;      ///< Rotation center point
-        SDL_Point* m_centerPtr;  ///< Pointer to rotation center point, or nullptr to use default center
-        SDL_RendererFlip m_flip; ///< Flip the sprite when drawing
+        SDL_Point m_center;     ///< Rotation center point
+        SDL_Point* m_centerPtr; ///< Pointer to rotation center point, or nullptr to use default center
 };
 
 }

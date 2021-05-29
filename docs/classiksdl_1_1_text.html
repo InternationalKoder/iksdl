@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -84,7 +84,6 @@ $(document).ready(function(){initNavTree('classiksdl_1_1_text.html',''); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classiksdl_1_1_text-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -92,7 +91,7 @@ $(document).ready(function(){initNavTree('classiksdl_1_1_text.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>A text that can be drawn.  
+<p>A text that can be drawn using <code>int</code> coordinates.  
  <a href="classiksdl_1_1_text.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_text_8hpp_source.html">Text.hpp</a>&gt;</code></p>
@@ -102,56 +101,28 @@ Inheritance diagram for iksdl::Text:</div>
  <div class="center">
   <img src="classiksdl_1_1_text.png" usemap="#iksdl::Text_map" alt=""/>
   <map id="iksdl::Text_map" name="iksdl::Text_map">
+<area href="classiksdl_1_1_base_text.html" title="Abstract base class for a text." alt="iksdl::BaseText" shape="rect" coords="0,56,97,80"/>
 <area href="classiksdl_1_1_drawable.html" title="An entity than can be drawn." alt="iksdl::Drawable" shape="rect" coords="0,0,97,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a919e9405344c8b4260e33828696397b3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">Encoding</a> { <a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b">Latin1</a>
-, <a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a81f91ccd37ce1d232cbfc1520374319d">Utf8</a>
- }</td></tr>
-<tr class="memdesc:a919e9405344c8b4260e33828696397b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available string encodings.  <a href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">More...</a><br /></td></tr>
-<tr class="separator:a919e9405344c8b4260e33828696397b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5defa4a731ca78f8b294a386f07917e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">RenderMode</a> { <a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917eae41480b6bbfbf7407974a88d3d34f4fa">Solid</a>
-, <a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7">Blended</a>
- }</td></tr>
-<tr class="memdesc:ad5defa4a731ca78f8b294a386f07917e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available rendering modes.  <a href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">More...</a><br /></td></tr>
-<tr class="separator:ad5defa4a731ca78f8b294a386f07917e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39986ac3dc01474515408b1e93309d29"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29">Flip</a> { <a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29a6adf97f83acf6453d4a6a4b1070f3754">None</a>
-, <a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29ac1b5fa03ecdb95d4a45dd1c40b02527f">Horizontal</a>
-, <a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29a06ce2a25e5d12c166a36f654dbea6012">Vertical</a>
-, <a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29a130c5b3473c57faa76e2a1c54e26f88e">Both</a>
- }</td></tr>
-<tr class="memdesc:a39986ac3dc01474515408b1e93309d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flipping modes for text.  <a href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29">More...</a><br /></td></tr>
-<tr class="separator:a39986ac3dc01474515408b1e93309d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5095f59a133fbe65948531cc33be4825"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a5095f59a133fbe65948531cc33be4825">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>, <a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
+<tr class="memitem:a5095f59a133fbe65948531cc33be4825"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a5095f59a133fbe65948531cc33be4825">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>, <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
 <tr class="memdesc:a5095f59a133fbe65948531cc33be4825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with given encoding and render mode.  <a href="classiksdl_1_1_text.html#a5095f59a133fbe65948531cc33be4825">More...</a><br /></td></tr>
 <tr class="separator:a5095f59a133fbe65948531cc33be4825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5e65c1656937a72a206f69e3d68b334"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#af5e65c1656937a72a206f69e3d68b334">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor, <a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>)</td></tr>
+<tr class="memitem:af5e65c1656937a72a206f69e3d68b334"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#af5e65c1656937a72a206f69e3d68b334">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor, <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>)</td></tr>
 <tr class="memdesc:af5e65c1656937a72a206f69e3d68b334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with given encoding and shaded render mode.  <a href="classiksdl_1_1_text.html#af5e65c1656937a72a206f69e3d68b334">More...</a><br /></td></tr>
 <tr class="separator:af5e65c1656937a72a206f69e3d68b334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534f54091a19905d416cc4dbccffeb74"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a534f54091a19905d416cc4dbccffeb74">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, const std::u16string &amp;text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
+<tr class="memitem:a534f54091a19905d416cc4dbccffeb74"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a534f54091a19905d416cc4dbccffeb74">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, const std::u16string &amp;text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
 <tr class="memdesc:a534f54091a19905d416cc4dbccffeb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with unicode encoding and given render mode.  <a href="classiksdl_1_1_text.html#a534f54091a19905d416cc4dbccffeb74">More...</a><br /></td></tr>
 <tr class="separator:a534f54091a19905d416cc4dbccffeb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a074deef48832b300d8c778eb70be02ec"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a074deef48832b300d8c778eb70be02ec">Text</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, const std::u16string &amp;text, const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor)</td></tr>
 <tr class="memdesc:a074deef48832b300d8c778eb70be02ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with unicode encoding and shaded render mode.  <a href="classiksdl_1_1_text.html#a074deef48832b300d8c778eb70be02ec">More...</a><br /></td></tr>
 <tr class="separator:a074deef48832b300d8c778eb70be02ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e98632c06a6679c88ea0954064cd63e"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a0e98632c06a6679c88ea0954064cd63e">~Text</a> ()</td></tr>
-<tr class="memdesc:a0e98632c06a6679c88ea0954064cd63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classiksdl_1_1_text.html#a0e98632c06a6679c88ea0954064cd63e">More...</a><br /></td></tr>
-<tr class="separator:a0e98632c06a6679c88ea0954064cd63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42653e7b7a38f41e2a2c4e90e706aade"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a42653e7b7a38f41e2a2c4e90e706aade">move</a> (const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;delta)</td></tr>
 <tr class="memdesc:a42653e7b7a38f41e2a2c4e90e706aade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the text to another position.  <a href="classiksdl_1_1_text.html#a42653e7b7a38f41e2a2c4e90e706aade">More...</a><br /></td></tr>
 <tr class="separator:a42653e7b7a38f41e2a2c4e90e706aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cabea0b3c4f3c8b62fc28c5565dfb77"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a9cabea0b3c4f3c8b62fc28c5565dfb77">scale</a> (const <a class="el" href="namespaceiksdl.html#abb0bae1f9de1817a471be070421976c1">Sizef</a> &amp;delta)</td></tr>
-<tr class="memdesc:a9cabea0b3c4f3c8b62fc28c5565dfb77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the size by using a scale factor.  <a href="classiksdl_1_1_text.html#a9cabea0b3c4f3c8b62fc28c5565dfb77">More...</a><br /></td></tr>
-<tr class="separator:a9cabea0b3c4f3c8b62fc28c5565dfb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4c2af4fc219fc9d5faa0cd4ac45a74c"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#ac4c2af4fc219fc9d5faa0cd4ac45a74c">rotate</a> (double delta)</td></tr>
-<tr class="memdesc:ac4c2af4fc219fc9d5faa0cd4ac45a74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the text.  <a href="classiksdl_1_1_text.html#ac4c2af4fc219fc9d5faa0cd4ac45a74c">More...</a><br /></td></tr>
-<tr class="separator:ac4c2af4fc219fc9d5faa0cd4ac45a74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43ca67f8d94d9a06f08f18ab843a377"><td class="memItemLeft" align="right" valign="top">virtual IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#aa43ca67f8d94d9a06f08f18ab843a377">draw</a> (SDL_Renderer *const renderer) const</td></tr>
 <tr class="memdesc:aa43ca67f8d94d9a06f08f18ab843a377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text.  <a href="classiksdl_1_1_text.html#aa43ca67f8d94d9a06f08f18ab843a377">More...</a><br /></td></tr>
 <tr class="separator:aa43ca67f8d94d9a06f08f18ab843a377"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,133 +138,124 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ecaf8312225bcf560874e13dcb1b3be"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a8ecaf8312225bcf560874e13dcb1b3be">setPosition</a> (const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;position)</td></tr>
 <tr class="memdesc:a8ecaf8312225bcf560874e13dcb1b3be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change position of the text.  <a href="classiksdl_1_1_text.html#a8ecaf8312225bcf560874e13dcb1b3be">More...</a><br /></td></tr>
 <tr class="separator:a8ecaf8312225bcf560874e13dcb1b3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad14d1928de057fc0fdc49caee93820ea"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#ad14d1928de057fc0fdc49caee93820ea">setRotation</a> (double rotation)</td></tr>
-<tr class="memdesc:ad14d1928de057fc0fdc49caee93820ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the rotation of the sprite.  <a href="classiksdl_1_1_text.html#ad14d1928de057fc0fdc49caee93820ea">More...</a><br /></td></tr>
-<tr class="separator:ad14d1928de057fc0fdc49caee93820ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f0cf3c470418f5e7fa90605b27d5abb"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a1f0cf3c470418f5e7fa90605b27d5abb">setCenter</a> (const <a class="el" href="namespaceiksdl.html#a3d4cf6bb82ce255b70138e1385bc9f0c">Positioni</a> &amp;center)</td></tr>
 <tr class="memdesc:a1f0cf3c470418f5e7fa90605b27d5abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the center point that is used to apply rotation.  <a href="classiksdl_1_1_text.html#a1f0cf3c470418f5e7fa90605b27d5abb">More...</a><br /></td></tr>
 <tr class="separator:a1f0cf3c470418f5e7fa90605b27d5abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab362acde0d7933057caa3924db7f812f"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#ab362acde0d7933057caa3924db7f812f">setFlip</a> (<a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29">Flip</a> flip)</td></tr>
-<tr class="memdesc:ab362acde0d7933057caa3924db7f812f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the text.  <a href="classiksdl_1_1_text.html#ab362acde0d7933057caa3924db7f812f">More...</a><br /></td></tr>
-<tr class="separator:ab362acde0d7933057caa3924db7f812f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf04f4966252714846749c988b191200"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#acf04f4966252714846749c988b191200">setText</a> (std::string text)</td></tr>
-<tr class="memdesc:acf04f4966252714846749c988b191200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the text string for Latin1 or UTF-8 encodings.  <a href="classiksdl_1_1_text.html#acf04f4966252714846749c988b191200">More...</a><br /></td></tr>
-<tr class="separator:acf04f4966252714846749c988b191200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e1c20f65298430f193ab57014587b3"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a64e1c20f65298430f193ab57014587b3">setText</a> (const std::u16string &amp;text)</td></tr>
-<tr class="memdesc:a64e1c20f65298430f193ab57014587b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the text string for Unicode encoding.  <a href="classiksdl_1_1_text.html#a64e1c20f65298430f193ab57014587b3">More...</a><br /></td></tr>
-<tr class="separator:a64e1c20f65298430f193ab57014587b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0818e021fa30d5f78d7452477ab04700"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a0818e021fa30d5f78d7452477ab04700">setFont</a> (const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font)</td></tr>
-<tr class="memdesc:a0818e021fa30d5f78d7452477ab04700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change font that is used to render the text.  <a href="classiksdl_1_1_text.html#a0818e021fa30d5f78d7452477ab04700">More...</a><br /></td></tr>
-<tr class="separator:a0818e021fa30d5f78d7452477ab04700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55465f5cb52ac07a34802aaf4f805fec"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a55465f5cb52ac07a34802aaf4f805fec">setColor</a> (const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color)</td></tr>
-<tr class="memdesc:a55465f5cb52ac07a34802aaf4f805fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change text color.  <a href="classiksdl_1_1_text.html#a55465f5cb52ac07a34802aaf4f805fec">More...</a><br /></td></tr>
-<tr class="separator:a55465f5cb52ac07a34802aaf4f805fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38fc46691ae5968761c3b4cdd386a0ed"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a38fc46691ae5968761c3b4cdd386a0ed">setBackgroundColor</a> (const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor)</td></tr>
-<tr class="memdesc:a38fc46691ae5968761c3b4cdd386a0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change background rectangle color.  <a href="classiksdl_1_1_text.html#a38fc46691ae5968761c3b4cdd386a0ed">More...</a><br /></td></tr>
-<tr class="separator:a38fc46691ae5968761c3b4cdd386a0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf6835878f893d534630b971e08b41a3"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#aaf6835878f893d534630b971e08b41a3">removeBackgroundColor</a> ()</td></tr>
-<tr class="memdesc:aaf6835878f893d534630b971e08b41a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the background color by changing the render mode if it was shaded.  <a href="classiksdl_1_1_text.html#aaf6835878f893d534630b971e08b41a3">More...</a><br /></td></tr>
-<tr class="separator:aaf6835878f893d534630b971e08b41a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e3428e08ad1a8de2a42e605c220c984"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_text.html#a8e3428e08ad1a8de2a42e605c220c984">resetCenter</a> ()</td></tr>
 <tr class="memdesc:a8e3428e08ad1a8de2a42e605c220c984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the rotation center point to default.  <a href="classiksdl_1_1_text.html#a8e3428e08ad1a8de2a42e605c220c984">More...</a><br /></td></tr>
 <tr class="separator:a8e3428e08ad1a8de2a42e605c220c984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classiksdl_1_1_base_text"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classiksdl_1_1_base_text')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classiksdl_1_1_base_text.html">iksdl::BaseText</a></td></tr>
+<tr class="memitem:a1b9e0f5d613ba8f9d3aebf71db4e689b inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a1b9e0f5d613ba8f9d3aebf71db4e689b">BaseText</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>, <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
+<tr class="memdesc:a1b9e0f5d613ba8f9d3aebf71db4e689b inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with given encoding and render mode.  <a href="classiksdl_1_1_base_text.html#a1b9e0f5d613ba8f9d3aebf71db4e689b">More...</a><br /></td></tr>
+<tr class="separator:a1b9e0f5d613ba8f9d3aebf71db4e689b inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4125f265175c76ebbb206ecab2175c inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a2f4125f265175c76ebbb206ecab2175c">BaseText</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, std::string text, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor, <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a> encoding=<a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a>)</td></tr>
+<tr class="memdesc:a2f4125f265175c76ebbb206ecab2175c inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with given encoding and shaded render mode.  <a href="classiksdl_1_1_base_text.html#a2f4125f265175c76ebbb206ecab2175c">More...</a><br /></td></tr>
+<tr class="separator:a2f4125f265175c76ebbb206ecab2175c inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987b80a7c0b78cad1a9eefd8c56606e1 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a987b80a7c0b78cad1a9eefd8c56606e1">BaseText</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, const std::u16string &amp;text, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a> renderMode=<a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a>)</td></tr>
+<tr class="memdesc:a987b80a7c0b78cad1a9eefd8c56606e1 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with unicode encoding and given render mode.  <a href="classiksdl_1_1_base_text.html#a987b80a7c0b78cad1a9eefd8c56606e1">More...</a><br /></td></tr>
+<tr class="separator:a987b80a7c0b78cad1a9eefd8c56606e1 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719f32e594a54bb3e9fa60fadb2a37b1 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a719f32e594a54bb3e9fa60fadb2a37b1">BaseText</a> (const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> &amp;renderer, const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font, const std::u16string &amp;text, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color, const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor)</td></tr>
+<tr class="memdesc:a719f32e594a54bb3e9fa60fadb2a37b1 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with unicode encoding and shaded render mode.  <a href="classiksdl_1_1_base_text.html#a719f32e594a54bb3e9fa60fadb2a37b1">More...</a><br /></td></tr>
+<tr class="separator:a719f32e594a54bb3e9fa60fadb2a37b1 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482fa89b32559c2ab0adff76e24fada8 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a482fa89b32559c2ab0adff76e24fada8">~BaseText</a> ()</td></tr>
+<tr class="memdesc:a482fa89b32559c2ab0adff76e24fada8 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classiksdl_1_1_base_text.html#a482fa89b32559c2ab0adff76e24fada8">More...</a><br /></td></tr>
+<tr class="separator:a482fa89b32559c2ab0adff76e24fada8 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9824718f034689c553cdb4b174a8ad44 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a9824718f034689c553cdb4b174a8ad44">scale</a> (const <a class="el" href="namespaceiksdl.html#abb0bae1f9de1817a471be070421976c1">Sizef</a> &amp;delta)</td></tr>
+<tr class="memdesc:a9824718f034689c553cdb4b174a8ad44 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the size by using a scale factor.  <a href="classiksdl_1_1_base_text.html#a9824718f034689c553cdb4b174a8ad44">More...</a><br /></td></tr>
+<tr class="separator:a9824718f034689c553cdb4b174a8ad44 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512a66c039d2cbe6c2b0a0d68e211b0d inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a512a66c039d2cbe6c2b0a0d68e211b0d">rotate</a> (double delta)</td></tr>
+<tr class="memdesc:a512a66c039d2cbe6c2b0a0d68e211b0d inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the text.  <a href="classiksdl_1_1_base_text.html#a512a66c039d2cbe6c2b0a0d68e211b0d">More...</a><br /></td></tr>
+<tr class="separator:a512a66c039d2cbe6c2b0a0d68e211b0d inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace29acec2f7346896c54a8ee5fcf9f7b inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#ace29acec2f7346896c54a8ee5fcf9f7b">setRotation</a> (double rotation)</td></tr>
+<tr class="memdesc:ace29acec2f7346896c54a8ee5fcf9f7b inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the rotation of the sprite.  <a href="classiksdl_1_1_base_text.html#ace29acec2f7346896c54a8ee5fcf9f7b">More...</a><br /></td></tr>
+<tr class="separator:ace29acec2f7346896c54a8ee5fcf9f7b inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632956790dec012013f171f7d6b75e79 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a632956790dec012013f171f7d6b75e79">setFlip</a> (<a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3">Flip</a> flip)</td></tr>
+<tr class="memdesc:a632956790dec012013f171f7d6b75e79 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the text.  <a href="classiksdl_1_1_base_text.html#a632956790dec012013f171f7d6b75e79">More...</a><br /></td></tr>
+<tr class="separator:a632956790dec012013f171f7d6b75e79 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd8d8a5b76bd053f74aac8f5757025c inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#affd8d8a5b76bd053f74aac8f5757025c">setText</a> (std::string text)</td></tr>
+<tr class="memdesc:affd8d8a5b76bd053f74aac8f5757025c inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the text string for Latin1 or UTF-8 encodings.  <a href="classiksdl_1_1_base_text.html#affd8d8a5b76bd053f74aac8f5757025c">More...</a><br /></td></tr>
+<tr class="separator:affd8d8a5b76bd053f74aac8f5757025c inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cb6f6cc23cf20ea73aab82baa3b413 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a13cb6f6cc23cf20ea73aab82baa3b413">setText</a> (const std::u16string &amp;text)</td></tr>
+<tr class="memdesc:a13cb6f6cc23cf20ea73aab82baa3b413 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the text string for Unicode encoding.  <a href="classiksdl_1_1_base_text.html#a13cb6f6cc23cf20ea73aab82baa3b413">More...</a><br /></td></tr>
+<tr class="separator:a13cb6f6cc23cf20ea73aab82baa3b413 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375d6a5ebf0c219bca69d8b00cdd6ee5 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a375d6a5ebf0c219bca69d8b00cdd6ee5">setFont</a> (const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;font)</td></tr>
+<tr class="memdesc:a375d6a5ebf0c219bca69d8b00cdd6ee5 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change font that is used to render the text.  <a href="classiksdl_1_1_base_text.html#a375d6a5ebf0c219bca69d8b00cdd6ee5">More...</a><br /></td></tr>
+<tr class="separator:a375d6a5ebf0c219bca69d8b00cdd6ee5 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570c7e98fad60885072442b4cba2e292 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a570c7e98fad60885072442b4cba2e292">setColor</a> (const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a570c7e98fad60885072442b4cba2e292 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change text color.  <a href="classiksdl_1_1_base_text.html#a570c7e98fad60885072442b4cba2e292">More...</a><br /></td></tr>
+<tr class="separator:a570c7e98fad60885072442b4cba2e292 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdba2746b3756e9988efed7a4564d239 inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#afdba2746b3756e9988efed7a4564d239">setBackgroundColor</a> (const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;backgroundColor)</td></tr>
+<tr class="memdesc:afdba2746b3756e9988efed7a4564d239 inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change background rectangle color.  <a href="classiksdl_1_1_base_text.html#afdba2746b3756e9988efed7a4564d239">More...</a><br /></td></tr>
+<tr class="separator:afdba2746b3756e9988efed7a4564d239 inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf9b8ac55d95c26420f2b79ebcc03cd inherit pub_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#aadf9b8ac55d95c26420f2b79ebcc03cd">removeBackgroundColor</a> ()</td></tr>
+<tr class="memdesc:aadf9b8ac55d95c26420f2b79ebcc03cd inherit pub_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the background color by changing the render mode if it was shaded.  <a href="classiksdl_1_1_base_text.html#aadf9b8ac55d95c26420f2b79ebcc03cd">More...</a><br /></td></tr>
+<tr class="separator:aadf9b8ac55d95c26420f2b79ebcc03cd inherit pub_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classiksdl_1_1_base_text"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classiksdl_1_1_base_text')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classiksdl_1_1_base_text.html">iksdl::BaseText</a></td></tr>
+<tr class="memitem:a63d861e7bd758fdef4664efda698b078 inherit pub_types_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a> { <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Latin1</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a81f91ccd37ce1d232cbfc1520374319d">Utf8</a>
+ }</td></tr>
+<tr class="memdesc:a63d861e7bd758fdef4664efda698b078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available string encodings.  <a href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">More...</a><br /></td></tr>
+<tr class="separator:a63d861e7bd758fdef4664efda698b078 inherit pub_types_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6309de6d0656bcad957a68692ab81379 inherit pub_types_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a> { <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379ae41480b6bbfbf7407974a88d3d34f4fa">Solid</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">Blended</a>
+ }</td></tr>
+<tr class="memdesc:a6309de6d0656bcad957a68692ab81379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available rendering modes.  <a href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">More...</a><br /></td></tr>
+<tr class="separator:a6309de6d0656bcad957a68692ab81379 inherit pub_types_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a9e46de0c7a97b7ffb2ea2bf0b51f3 inherit pub_types_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3">Flip</a> { <a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3a6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3ac1b5fa03ecdb95d4a45dd1c40b02527f">Horizontal</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3a06ce2a25e5d12c166a36f654dbea6012">Vertical</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3a130c5b3473c57faa76e2a1c54e26f88e">Both</a>
+ }</td></tr>
+<tr class="memdesc:a27a9e46de0c7a97b7ffb2ea2bf0b51f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flipping modes for text.  <a href="classiksdl_1_1_base_text.html#a27a9e46de0c7a97b7ffb2ea2bf0b51f3">More...</a><br /></td></tr>
+<tr class="separator:a27a9e46de0c7a97b7ffb2ea2bf0b51f3 inherit pub_types_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classiksdl_1_1_base_text"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classiksdl_1_1_base_text')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classiksdl_1_1_base_text.html">iksdl::BaseText</a></td></tr>
+<tr class="memitem:afd9c6543d51f637605dfa594b159a302 inherit pro_methods_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">IKSDL_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#afd9c6543d51f637605dfa594b159a302">refreshTexture</a> ()</td></tr>
+<tr class="memdesc:afd9c6543d51f637605dfa594b159a302 inherit pro_methods_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the text to render with current parameters.  <a href="classiksdl_1_1_base_text.html#afd9c6543d51f637605dfa594b159a302">More...</a><br /></td></tr>
+<tr class="separator:afd9c6543d51f637605dfa594b159a302 inherit pro_methods_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classiksdl_1_1_base_text"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classiksdl_1_1_base_text')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classiksdl_1_1_base_text.html">iksdl::BaseText</a></td></tr>
+<tr class="memitem:a03200e7128a2dfd7b66b1bdf2902c54c inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiksdl_1_1_renderer.html">Renderer</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a03200e7128a2dfd7b66b1bdf2902c54c">m_renderer</a></td></tr>
+<tr class="memdesc:a03200e7128a2dfd7b66b1bdf2902c54c inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_renderer.html" title="Component that is able to draw entities using hardware acceleation.">Renderer</a> for the text.  <a href="classiksdl_1_1_base_text.html#a03200e7128a2dfd7b66b1bdf2902c54c">More...</a><br /></td></tr>
+<tr class="separator:a03200e7128a2dfd7b66b1bdf2902c54c inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a51b294c4aa3f500cb464c1d97c79b inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classiksdl_1_1_font.html">Font</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a46a51b294c4aa3f500cb464c1d97c79b">m_font</a></td></tr>
+<tr class="memdesc:a46a51b294c4aa3f500cb464c1d97c79b inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> font.  <a href="classiksdl_1_1_base_text.html#a46a51b294c4aa3f500cb464c1d97c79b">More...</a><br /></td></tr>
+<tr class="separator:a46a51b294c4aa3f500cb464c1d97c79b inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24df3777899b540ea4963562400dacbf inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a24df3777899b540ea4963562400dacbf">m_color</a></td></tr>
+<tr class="memdesc:a24df3777899b540ea4963562400dacbf inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> color.  <a href="classiksdl_1_1_base_text.html#a24df3777899b540ea4963562400dacbf">More...</a><br /></td></tr>
+<tr class="separator:a24df3777899b540ea4963562400dacbf inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceeff933958b80f8a6f58071f88d5ce8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">std::optional&lt; SDL_Color &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#aceeff933958b80f8a6f58071f88d5ce8">m_backgroundColor</a></td></tr>
+<tr class="memdesc:aceeff933958b80f8a6f58071f88d5ce8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background color when using shaded rendering.  <a href="classiksdl_1_1_base_text.html#aceeff933958b80f8a6f58071f88d5ce8">More...</a><br /></td></tr>
+<tr class="separator:aceeff933958b80f8a6f58071f88d5ce8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615b0cc1b53cfebd55f4168c90e31525 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a615b0cc1b53cfebd55f4168c90e31525">m_encoding</a></td></tr>
+<tr class="memdesc:a615b0cc1b53cfebd55f4168c90e31525 inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encoding when not unicode.  <a href="classiksdl_1_1_base_text.html#a615b0cc1b53cfebd55f4168c90e31525">More...</a><br /></td></tr>
+<tr class="separator:a615b0cc1b53cfebd55f4168c90e31525 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c957b29ba4cfa82a580348b9e43ea84 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a1c957b29ba4cfa82a580348b9e43ea84">m_renderMode</a></td></tr>
+<tr class="memdesc:a1c957b29ba4cfa82a580348b9e43ea84 inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendering mode.  <a href="classiksdl_1_1_base_text.html#a1c957b29ba4cfa82a580348b9e43ea84">More...</a><br /></td></tr>
+<tr class="separator:a1c957b29ba4cfa82a580348b9e43ea84 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a526afd9d01122009ae460ec57ba2b97d inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a526afd9d01122009ae460ec57ba2b97d">m_text</a></td></tr>
+<tr class="memdesc:a526afd9d01122009ae460ec57ba2b97d inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> string when encoding is not unicode.  <a href="classiksdl_1_1_base_text.html#a526afd9d01122009ae460ec57ba2b97d">More...</a><br /></td></tr>
+<tr class="separator:a526afd9d01122009ae460ec57ba2b97d inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92518e87556b0e57b03a11c98b8d9da inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::vector&lt; uint16_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#ae92518e87556b0e57b03a11c98b8d9da">m_unicodeText</a></td></tr>
+<tr class="memdesc:ae92518e87556b0e57b03a11c98b8d9da inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unicode text string as numbers.  <a href="classiksdl_1_1_base_text.html#ae92518e87556b0e57b03a11c98b8d9da">More...</a><br /></td></tr>
+<tr class="separator:ae92518e87556b0e57b03a11c98b8d9da inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3c89f4c0240c7f79b87080a518b6f8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#aee3c89f4c0240c7f79b87080a518b6f8">m_texture</a></td></tr>
+<tr class="memdesc:aee3c89f4c0240c7f79b87080a518b6f8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL texture holding the rendered text.  <a href="classiksdl_1_1_base_text.html#aee3c89f4c0240c7f79b87080a518b6f8">More...</a><br /></td></tr>
+<tr class="separator:aee3c89f4c0240c7f79b87080a518b6f8 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcabc7981711af1b822d2a2af27fd6c inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceiksdl.html#abb0bae1f9de1817a471be070421976c1">Sizef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#a8dcabc7981711af1b822d2a2af27fd6c">m_scale</a></td></tr>
+<tr class="memdesc:a8dcabc7981711af1b822d2a2af27fd6c inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> scale.  <a href="classiksdl_1_1_base_text.html#a8dcabc7981711af1b822d2a2af27fd6c">More...</a><br /></td></tr>
+<tr class="separator:a8dcabc7981711af1b822d2a2af27fd6c inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acedf2a563dff873d7bbc01fabda7e99d inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#acedf2a563dff873d7bbc01fabda7e99d">m_rotation</a></td></tr>
+<tr class="memdesc:acedf2a563dff873d7bbc01fabda7e99d inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> rotation.  <a href="classiksdl_1_1_base_text.html#acedf2a563dff873d7bbc01fabda7e99d">More...</a><br /></td></tr>
+<tr class="separator:acedf2a563dff873d7bbc01fabda7e99d inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d01fbe273544a314b90974de27a878 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memItemLeft" align="right" valign="top">SDL_RendererFlip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_text.html#aa7d01fbe273544a314b90974de27a878">m_flip</a></td></tr>
+<tr class="memdesc:aa7d01fbe273544a314b90974de27a878 inherit pro_attribs_classiksdl_1_1_base_text"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the text when drawing.  <a href="classiksdl_1_1_base_text.html#aa7d01fbe273544a314b90974de27a878">More...</a><br /></td></tr>
+<tr class="separator:aa7d01fbe273544a314b90974de27a878 inherit pro_attribs_classiksdl_1_1_base_text"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A text that can be drawn. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a919e9405344c8b4260e33828696397b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919e9405344c8b4260e33828696397b3">&#9670;&nbsp;</a></span>Encoding</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">iksdl::Text::Encoding</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Available string encodings. </p>
-<p>Unicode is also available, but is handled through specific methods. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b"></a>Latin1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a919e9405344c8b4260e33828696397b3a81f91ccd37ce1d232cbfc1520374319d"></a>Utf8&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a39986ac3dc01474515408b1e93309d29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39986ac3dc01474515408b1e93309d29">&#9670;&nbsp;</a></span>Flip</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29">iksdl::Text::Flip</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Flipping modes for text. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a39986ac3dc01474515408b1e93309d29a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a39986ac3dc01474515408b1e93309d29ac1b5fa03ecdb95d4a45dd1c40b02527f"></a>Horizontal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a39986ac3dc01474515408b1e93309d29a06ce2a25e5d12c166a36f654dbea6012"></a>Vertical&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a39986ac3dc01474515408b1e93309d29a130c5b3473c57faa76e2a1c54e26f88e"></a>Both&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="ad5defa4a731ca78f8b294a386f07917e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5defa4a731ca78f8b294a386f07917e">&#9670;&nbsp;</a></span>RenderMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">iksdl::Text::RenderMode</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Available rendering modes. </p>
-<ul>
-<li>Solid is the fastest but has lowest quality</li>
-<li>Blended is best quality but slowest</li>
-</ul>
-<p>Shaded is also available, but handled through specific methods. It is best quality and quite fast, but has a background rectangle. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad5defa4a731ca78f8b294a386f07917eae41480b6bbfbf7407974a88d3d34f4fa"></a>Solid&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7"></a>Blended&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>A text that can be drawn using <code>int</code> coordinates. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5095f59a133fbe65948531cc33be4825"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5095f59a133fbe65948531cc33be4825">&#9670;&nbsp;</a></span>Text() <span class="overload">[1/4]</span></h2>
 
@@ -333,14 +295,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">Encoding</a>&#160;</td>
-          <td class="paramname"><em>encoding</em> = <code><a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a></code>, </td>
+          <td class="paramtype"><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a>&#160;</td>
+          <td class="paramname"><em>encoding</em> = <code><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">RenderMode</a>&#160;</td>
-          <td class="paramname"><em>renderMode</em> = <code><a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a>&#160;</td>
+          <td class="paramname"><em>renderMode</em> = <code><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -356,9 +318,9 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">renderer</td><td><a class="el" href="classiksdl_1_1_renderer.html" title="Component that is able to draw entities using hardware acceleation.">Renderer</a> that will handle the drawing </td></tr>
     <tr><td class="paramname">font</td><td><a class="el" href="classiksdl_1_1_font.html" title="Represents a text font.">Font</a> that will be used to render the text </td></tr>
-    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> string </td></tr>
+    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> string </td></tr>
     <tr><td class="paramname">position</td><td><a class="el" href="classiksdl_1_1_position.html" title="Represents a 2D position.">Position</a> where the text will be drawn (top-left corner) </td></tr>
-    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> color </td></tr>
+    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> color </td></tr>
     <tr><td class="paramname">encoding</td><td>String encoding </td></tr>
     <tr><td class="paramname">renderMode</td><td>Rendering mode to use when drawing the text </td></tr>
   </table>
@@ -412,8 +374,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3">Encoding</a>&#160;</td>
-          <td class="paramname"><em>encoding</em> = <code><a class="el" href="classiksdl_1_1_text.html#a919e9405344c8b4260e33828696397b3a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078">Encoding</a>&#160;</td>
+          <td class="paramname"><em>encoding</em> = <code><a class="el" href="classiksdl_1_1_base_text.html#a63d861e7bd758fdef4664efda698b078a2ad869afeb953d2aad1cf9fbe870ce7b">Encoding::Latin1</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -429,9 +391,9 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">renderer</td><td><a class="el" href="classiksdl_1_1_renderer.html" title="Component that is able to draw entities using hardware acceleation.">Renderer</a> that will handle the drawing </td></tr>
     <tr><td class="paramname">font</td><td><a class="el" href="classiksdl_1_1_font.html" title="Represents a text font.">Font</a> that will be used to render the text </td></tr>
-    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> string </td></tr>
+    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> string </td></tr>
     <tr><td class="paramname">position</td><td><a class="el" href="classiksdl_1_1_position.html" title="Represents a 2D position.">Position</a> where the text will be drawn (top-left corner) </td></tr>
-    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> color </td></tr>
+    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> color </td></tr>
     <tr><td class="paramname">backgroundColor</td><td><a class="el" href="classiksdl_1_1_color.html" title="Defines a color.">Color</a> of the background rectangle </td></tr>
     <tr><td class="paramname">encoding</td><td>String encoding </td></tr>
   </table>
@@ -479,8 +441,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e">RenderMode</a>&#160;</td>
-          <td class="paramname"><em>renderMode</em> = <code><a class="el" href="classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917ea3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379">RenderMode</a>&#160;</td>
+          <td class="paramname"><em>renderMode</em> = <code><a class="el" href="classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379a3452c82c7aab95f6ecf260b19985caf7">RenderMode::Blended</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -496,9 +458,9 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">renderer</td><td><a class="el" href="classiksdl_1_1_renderer.html" title="Component that is able to draw entities using hardware acceleation.">Renderer</a> that will handle the drawing </td></tr>
     <tr><td class="paramname">font</td><td><a class="el" href="classiksdl_1_1_font.html" title="Represents a text font.">Font</a> that will be used to render the text </td></tr>
-    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> string </td></tr>
+    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> string </td></tr>
     <tr><td class="paramname">position</td><td><a class="el" href="classiksdl_1_1_position.html" title="Represents a 2D position.">Position</a> where the text will be drawn (top-left corner) </td></tr>
-    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> color </td></tr>
+    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> color </td></tr>
     <tr><td class="paramname">renderMode</td><td>Rendering mode to use when drawing the text </td></tr>
   </table>
   </dd>
@@ -561,32 +523,13 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">renderer</td><td><a class="el" href="classiksdl_1_1_renderer.html" title="Component that is able to draw entities using hardware acceleation.">Renderer</a> that will handle the drawing </td></tr>
     <tr><td class="paramname">font</td><td><a class="el" href="classiksdl_1_1_font.html" title="Represents a text font.">Font</a> that will be used to render the text </td></tr>
-    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> string </td></tr>
+    <tr><td class="paramname">text</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> string </td></tr>
     <tr><td class="paramname">position</td><td><a class="el" href="classiksdl_1_1_position.html" title="Represents a 2D position.">Position</a> where the text will be drawn (top-left corner) </td></tr>
-    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn.">Text</a> color </td></tr>
+    <tr><td class="paramname">color</td><td><a class="el" href="classiksdl_1_1_text.html" title="A text that can be drawn using int coordinates.">Text</a> color </td></tr>
     <tr><td class="paramname">backgroundColor</td><td><a class="el" href="classiksdl_1_1_color.html" title="Defines a color.">Color</a> of the background rectangle </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a0e98632c06a6679c88ea0954064cd63e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e98632c06a6679c88ea0954064cd63e">&#9670;&nbsp;</a></span>~Text()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT iksdl::Text::~Text </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
 
 </div>
 </div>
@@ -623,7 +566,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classiksdl_1_1_drawable.html#ad3e13c60c1b28a718ad1127f3afc5873">iksdl::Drawable</a>.</p>
+<p>Implements <a class="el" href="classiksdl_1_1_base_text.html#ad981804d495c8f77d5a23f76a592c2c5">iksdl::BaseText</a>.</p>
 
 </div>
 </div>
@@ -747,33 +690,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaf6835878f893d534630b971e08b41a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf6835878f893d534630b971e08b41a3">&#9670;&nbsp;</a></span>removeBackgroundColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::removeBackgroundColor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Remove the background color by changing the render mode if it was shaded. </p>
-
-</div>
-</div>
 <a id="a8e3428e08ad1a8de2a42e605c220c984"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e3428e08ad1a8de2a42e605c220c984">&#9670;&nbsp;</a></span>resetCenter()</h2>
 
@@ -801,96 +717,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4c2af4fc219fc9d5faa0cd4ac45a74c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4c2af4fc219fc9d5faa0cd4ac45a74c">&#9670;&nbsp;</a></span>rotate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::rotate </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>delta</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Rotate the text. </p>
-<p>The rotation is relative to the current orientation.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delta</td><td>Angle difference to apply</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classiksdl_1_1_text.html#ad14d1928de057fc0fdc49caee93820ea" title="Change the rotation of the sprite.">setRotation</a> </dd></dl>
-
-</div>
-</div>
-<a id="a9cabea0b3c4f3c8b62fc28c5565dfb77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cabea0b3c4f3c8b62fc28c5565dfb77">&#9670;&nbsp;</a></span>scale()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::scale </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceiksdl.html#abb0bae1f9de1817a471be070421976c1">Sizef</a> &amp;&#160;</td>
-          <td class="paramname"><em>delta</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change the size by using a scale factor. </p>
-<p>The scaling is relative to the current size.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">delta</td><td>Scaling factor to apply </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a38fc46691ae5968761c3b4cdd386a0ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38fc46691ae5968761c3b4cdd386a0ed">&#9670;&nbsp;</a></span>setBackgroundColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setBackgroundColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>backgroundColor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change background rectangle color. </p>
-<p>This method sets the render mode to shaded.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">backgroundColor</td><td>New background color </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a1f0cf3c470418f5e7fa90605b27d5abb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f0cf3c470418f5e7fa90605b27d5abb">&#9670;&nbsp;</a></span>setCenter()</h2>
 
@@ -911,92 +737,6 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">center</td><td>New center point for rotations </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a55465f5cb52ac07a34802aaf4f805fec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55465f5cb52ac07a34802aaf4f805fec">&#9670;&nbsp;</a></span>setColor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiksdl_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change text color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>New text color </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab362acde0d7933057caa3924db7f812f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab362acde0d7933057caa3924db7f812f">&#9670;&nbsp;</a></span>setFlip()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setFlip </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classiksdl_1_1_text.html#a39986ac3dc01474515408b1e93309d29">Flip</a>&#160;</td>
-          <td class="paramname"><em>flip</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Flip the text. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flip</td><td>Type of flip to apply </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0818e021fa30d5f78d7452477ab04700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0818e021fa30d5f78d7452477ab04700">&#9670;&nbsp;</a></span>setFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setFont </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classiksdl_1_1_font.html">Font</a> &amp;&#160;</td>
-          <td class="paramname"><em>font</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Change font that is used to render the text. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">font</td><td>New font </td></tr>
   </table>
   </dd>
 </dl>
@@ -1036,97 +776,6 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classiksdl_1_1_text.html#a42653e7b7a38f41e2a2c4e90e706aade" title="Move the text to another position.">move</a> </dd></dl>
-
-</div>
-</div>
-<a id="ad14d1928de057fc0fdc49caee93820ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad14d1928de057fc0fdc49caee93820ea">&#9670;&nbsp;</a></span>setRotation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setRotation </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rotation</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Change the rotation of the sprite. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rotation</td><td>New rotation</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classiksdl_1_1_text.html#ac4c2af4fc219fc9d5faa0cd4ac45a74c" title="Rotate the text.">rotate</a> </dd></dl>
-
-</div>
-</div>
-<a id="a64e1c20f65298430f193ab57014587b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64e1c20f65298430f193ab57014587b3">&#9670;&nbsp;</a></span>setText() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setText </td>
-          <td>(</td>
-          <td class="paramtype">const std::u16string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change the text string for Unicode encoding. </p>
-<p>Initial render mode is preserved.</p>
-<p>In the case of shaded rendering, the background color is also preserved.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td>New text string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acf04f4966252714846749c988b191200"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf04f4966252714846749c988b191200">&#9670;&nbsp;</a></span>setText() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">IKSDL_EXPORT void iksdl::Text::setText </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Change the text string for Latin1 or UTF-8 encodings. </p>
-<p>Initial encoding and render mode are preserved.</p>
-<p>In the case of shaded rendering, the background color is also preserved.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td>New text string </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

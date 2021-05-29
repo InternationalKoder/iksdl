@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['text_821',['Text',['../classiksdl_1_1_font.html#aee0ad1dafe471596e6d25530d9fbaf0c',1,'iksdl::Font::Text()'],['../classiksdl_1_1_renderer.html#aee0ad1dafe471596e6d25530d9fbaf0c',1,'iksdl::Renderer::Text()'],['../classiksdl_1_1_texture.html#aee0ad1dafe471596e6d25530d9fbaf0c',1,'iksdl::Texture::Text()']]],
-  ['texture_822',['Texture',['../classiksdl_1_1_renderer.html#af7f909106d08e36cd50aa58e36f9bf47',1,'iksdl::Renderer']]]
+  ['sprite_913',['Sprite',['../classiksdl_1_1_texture.html#a3292175d54d93d126ba2829249316344',1,'iksdl::Texture']]],
+  ['spritef_914',['Spritef',['../classiksdl_1_1_texture.html#aa5a287dfc0c6cf96c6cd42c5a69b4423',1,'iksdl::Texture']]]
 ];

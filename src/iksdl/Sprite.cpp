@@ -21,31 +21,24 @@
  */
 
 #include "iksdl/Sprite.hpp"
+#include "iksdl/Texture.hpp"
 
 namespace iksdl
 {
 Sprite::Sprite(const Texture& texture, const Positioni& position) :
-    m_texture(&texture),
+    BaseSprite(texture),
     m_rect({ .x = position.getX(), .y = position.getY(),
            .w = m_texture->m_size.getWidth(), .h = m_texture->m_size.getHeight() }),
-    m_textureRectPtr(nullptr),
-    m_scale(1.0f, 1.0f),
-    m_rotation(0.0),
-    m_centerPtr(nullptr),
-    m_flip(SDL_FLIP_NONE)
+    m_centerPtr(nullptr)
 {}
 
 Sprite::Sprite(const Texture& texture, const Positioni& position, const Recti& textureRect) :
-    m_texture(&texture),
+    BaseSprite(texture),
     m_rect({ .x = position.getX(), .y = position.getY(),
            .w = m_texture->m_size.getWidth(), .h = m_texture->m_size.getHeight() }),
-    m_textureRectPtr(nullptr),
-    m_scale(1.0f, 1.0f),
-    m_rotation(0.0),
-    m_centerPtr(nullptr),
-    m_flip(SDL_FLIP_NONE)
+    m_centerPtr(nullptr)
 {
-    setTextureRect(textureRect);
+    Sprite::setTextureRect(textureRect);
 }
 
 void Sprite::scale(const Sizef& delta)
@@ -98,24 +91,5 @@ void Sprite::setCenter(const Positioni& center)
 {
     m_center = SDL_Point { .x = center.getX(), .y = center.getY() };
     m_centerPtr = &m_center;
-}
-
-void Sprite::setFlip(Flip flip)
-{
-    switch(flip)
-    {
-        case Flip::None:
-            m_flip = SDL_FLIP_NONE;
-            break;
-        case Flip::Horizontal:
-            m_flip = SDL_FLIP_HORIZONTAL;
-            break;
-        case Flip::Vertical:
-            m_flip = SDL_FLIP_VERTICAL;
-            break;
-        case Flip::Both:
-            m_flip = static_cast<SDL_RendererFlip>(SDL_FLIP_HORIZONTAL | SDL_FLIP_VERTICAL);
-            break;
-    }
 }
 }

@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['line_549',['Line',['../classiksdl_1_1_line.html#a12c89b671f136f0a7f302a3d5032153b',1,'iksdl::Line']]],
-  ['linearray_550',['LineArray',['../classiksdl_1_1_line_array.html#abf4cd3fdd0e4d203a3131bd600900aa6',1,'iksdl::LineArray::LineArray(Color color)'],['../classiksdl_1_1_line_array.html#aaf85a0331f7179167c7ce8c7dcdde6c9',1,'iksdl::LineArray::LineArray(const std::vector&lt; Positioni &gt; &amp;positions, Color color)']]]
+  ['maximized_620',['maximized',['../classiksdl_1_1_window_options.html#a89fc2535a86c126d58600f9aa07189b2',1,'iksdl::WindowOptions']]],
+  ['minimized_621',['minimized',['../classiksdl_1_1_window_options.html#a975e5420bbdb80863a13f4d8bbafc172',1,'iksdl::WindowOptions']]],
+  ['mousebuttonevent_622',['MouseButtonEvent',['../classiksdl_1_1_mouse_button_event.html#a7e88df2346dc36f028d6cc76e201ae03',1,'iksdl::MouseButtonEvent']]],
+  ['mousecapture_623',['mouseCapture',['../classiksdl_1_1_window_options.html#a34bf45ce61a13d985249badd47248437',1,'iksdl::WindowOptions']]],
+  ['mousefocus_624',['mouseFocus',['../classiksdl_1_1_window_options.html#a3524f1b1408a1c78400167afe964550d',1,'iksdl::WindowOptions']]],
+  ['mousemotionevent_625',['MouseMotionEvent',['../classiksdl_1_1_mouse_motion_event.html#acf5fd87187c914879867c46cc11388f7',1,'iksdl::MouseMotionEvent']]],
+  ['mousewheelevent_626',['MouseWheelEvent',['../classiksdl_1_1_mouse_wheel_event.html#a67978d5a3715c43abcbbbe69d4beb6f1',1,'iksdl::MouseWheelEvent']]],
+  ['move_627',['move',['../classiksdl_1_1_abstract_rectanglef.html#ab84889183349c1b3f7653fdb9b2c8fe4',1,'iksdl::AbstractRectanglef::move()'],['../classiksdl_1_1_textf.html#a8bf81eec368b02066e4bdd80aafcbd8e',1,'iksdl::Textf::move()'],['../classiksdl_1_1_text.html#a42653e7b7a38f41e2a2c4e90e706aade',1,'iksdl::Text::move()'],['../classiksdl_1_1_spritef.html#a14c3bf41ba1ce278c6cc28e003c82aa3',1,'iksdl::Spritef::move()'],['../classiksdl_1_1_sprite.html#a7afe59c07870dcf817627f0a8dc76354',1,'iksdl::Sprite::move()'],['../classiksdl_1_1_base_point.html#a4dd8fa5be13955ac8d1c8c8e37199848',1,'iksdl::BasePoint::move()'],['../classiksdl_1_1_base_line.html#a333a04e8317ae26891f4eb5737c128dc',1,'iksdl::BaseLine::move()'],['../classiksdl_1_1_abstract_rectangle_arrayf.html#a5f61c8a857b69291e31cdc27376269b9',1,'iksdl::AbstractRectangleArrayf::move()'],['../classiksdl_1_1_abstract_rectangle_array.html#af53a66173ac443bc6e5f38a2dfd424ec',1,'iksdl::AbstractRectangleArray::move()'],['../classiksdl_1_1_abstract_rectangle.html#a1fb95afb0df28ac97634c75556ee550b',1,'iksdl::AbstractRectangle::move()']]],
+  ['music_628',['Music',['../classiksdl_1_1_music.html#a688f28761549f51bd66bf0396f49fda6',1,'iksdl::Music::Music(const std::string &amp;filePath)'],['../classiksdl_1_1_music.html#a5790a06e0d46d8e11e54eb8a165d044c',1,'iksdl::Music::Music(const Music &amp;)=delete'],['../classiksdl_1_1_music.html#a6834d0c181fb6742cf5e9f33258f8a37',1,'iksdl::Music::Music(Music &amp;&amp;other)']]]
 ];

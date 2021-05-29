@@ -39,7 +39,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief The borders of a rectangle that can be drawn
+/// \brief The borders of a rectangle that can be drawn using \c int coordinates
 ///
 /// \note When handling several rectangles with same color,
 /// prefer \c RectangleArray for better performance

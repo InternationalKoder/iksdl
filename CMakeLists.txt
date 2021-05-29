@@ -21,35 +21,41 @@
 
 cmake_minimum_required(VERSION 3.12)
 
-project(iksdl VERSION 1.0 LANGUAGES CXX)
+project(iksdl VERSION 1.1 LANGUAGES CXX)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 
 # Project files
 set(SOURCE_FILES
     src/iksdl/AbstractRectangle.cpp
+    src/iksdl/AbstractRectanglef.cpp
     src/iksdl/AbstractRectangleArray.cpp
+    src/iksdl/AbstractRectangleArrayf.cpp
+    src/iksdl/BaseSprite.cpp
+    src/iksdl/BaseText.cpp
     src/iksdl/Channels.cpp
     src/iksdl/Event.cpp
     src/iksdl/FillRectangle.cpp
     src/iksdl/FillRectangleArray.cpp
+    src/iksdl/FillRectangleArrayf.cpp
+    src/iksdl/FillRectanglef.cpp
     src/iksdl/Font.cpp
     src/iksdl/Keyboard.cpp
     src/iksdl/KeyboardEvent.cpp
-    src/iksdl/Line.cpp
-    src/iksdl/LineArray.cpp
     src/iksdl/Mouse.cpp
     src/iksdl/MouseButtonEvent.cpp
     src/iksdl/MouseMotionEvent.cpp
     src/iksdl/MouseWheelEvent.cpp
     src/iksdl/Music.cpp
-    src/iksdl/Point.cpp
-    src/iksdl/PointArray.cpp
     src/iksdl/Rectangle.cpp
     src/iksdl/RectangleArray.cpp
+    src/iksdl/RectangleArrayf.cpp
+    src/iksdl/Rectanglef.cpp
     src/iksdl/Renderer.cpp
     src/iksdl/Sound.cpp
     src/iksdl/Sprite.cpp
+    src/iksdl/Spritef.cpp
     src/iksdl/Text.cpp
+    src/iksdl/Textf.cpp
     src/iksdl/Texture.cpp
     src/iksdl/Window.cpp
     src/iksdl/WindowEvent.cpp
@@ -62,6 +68,10 @@ set(INCLUDE_FILES
     include/iksdl/AbstractEvent.hpp
     include/iksdl/AbstractRectangle.hpp
     include/iksdl/AbstractRectangleArray.hpp
+    include/iksdl/AbstractRectangleArrayf.hpp
+    include/iksdl/AbstractRectanglef.hpp
+    include/iksdl/BaseSprite.hpp
+    include/iksdl/BaseText.hpp
     include/iksdl/Channels.hpp
     include/iksdl/Color.hpp
     include/iksdl/Drawable.hpp
@@ -70,6 +80,8 @@ set(INCLUDE_FILES
     include/iksdl/EventSupport.hpp
     include/iksdl/FillRectangle.hpp
     include/iksdl/FillRectangleArray.hpp
+    include/iksdl/FillRectangleArrayf.hpp
+    include/iksdl/FillRectanglef.hpp
     include/iksdl/Font.hpp
     include/iksdl/InvalidParameterException.hpp
     include/iksdl/Keyboard.hpp
@@ -88,13 +100,17 @@ set(INCLUDE_FILES
     include/iksdl/Rect.hpp
     include/iksdl/Rectangle.hpp
     include/iksdl/RectangleArray.hpp
+    include/iksdl/RectangleArrayf.hpp
+    include/iksdl/Rectanglef.hpp
     include/iksdl/Renderer.hpp
     include/iksdl/RendererOptions.hpp
     include/iksdl/SdlException.hpp
     include/iksdl/Size.hpp
     include/iksdl/Sound.hpp
     include/iksdl/Sprite.hpp
+    include/iksdl/Spritef.hpp
     include/iksdl/Text.hpp
+    include/iksdl/Textf.hpp
     include/iksdl/Texture.hpp
     include/iksdl/Window.hpp
     include/iksdl/WindowEvent.hpp

@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['waitevent_622',['waitEvent',['../classiksdl_1_1_window.html#a8b39ffacbe3ad2f402e6d8613ed60414',1,'iksdl::Window']]],
-  ['window_623',['Window',['../classiksdl_1_1_window.html#a4b26701ad747499301b18e8c48cee47e',1,'iksdl::Window::Window(const std::string &amp;title, const Sizei &amp;size, const WindowOptions &amp;options=DEFAULT_OPTIONS, const RendererOptions &amp;rendererOptions=Renderer::DEFAULT_OPTIONS, const Positioni &amp;position=UNDEFINED_POSITION)'],['../classiksdl_1_1_window.html#a96ccc7d38cd2894757ee89453720c010',1,'iksdl::Window::Window(const Window &amp;)=delete'],['../classiksdl_1_1_window.html#ad9fbe130d34c03087dae240216370c27',1,'iksdl::Window::Window(Window &amp;&amp;other)']]],
-  ['windowevent_624',['WindowEvent',['../classiksdl_1_1_window_event.html#afad89a9c0a8cd3124496f1610eda9620',1,'iksdl::WindowEvent']]],
-  ['windowoptions_625',['WindowOptions',['../classiksdl_1_1_window_options.html#ab203274788879658823f188342bf2bbd',1,'iksdl::WindowOptions']]],
-  ['withposition_626',['withPosition',['../classiksdl_1_1_rect.html#a3fc39706b842df2c587919b08a18b632',1,'iksdl::Rect']]],
-  ['withsize_627',['withSize',['../classiksdl_1_1_rect.html#aea3a1a095776c780932d2380a7509aae',1,'iksdl::Rect']]]
+  ['_7eabstractevent_698',['~AbstractEvent',['../classiksdl_1_1_abstract_event.html#a35c0938098c9fbebcc62c2b67b8b9682',1,'iksdl::AbstractEvent']]],
+  ['_7ebasetext_699',['~BaseText',['../classiksdl_1_1_base_text.html#a482fa89b32559c2ab0adff76e24fada8',1,'iksdl::BaseText']]],
+  ['_7efont_700',['~Font',['../classiksdl_1_1_font.html#a01ab3c35832c46a78a7f131f3a125f1c',1,'iksdl::Font']]],
+  ['_7emusic_701',['~Music',['../classiksdl_1_1_music.html#acc193991ce2e6845546cbed01e2e62f8',1,'iksdl::Music']]],
+  ['_7erenderer_702',['~Renderer',['../classiksdl_1_1_renderer.html#a7c452f727fe5233c913ff5516638482d',1,'iksdl::Renderer']]],
+  ['_7esound_703',['~Sound',['../classiksdl_1_1_sound.html#aa2b9c4f23df5b6fa2c33667e3feba3e1',1,'iksdl::Sound']]],
+  ['_7etexture_704',['~Texture',['../classiksdl_1_1_texture.html#a29a95b55be13bf1dc12693cd9199a5a4',1,'iksdl::Texture']]],
+  ['_7ewindow_705',['~Window',['../classiksdl_1_1_window.html#a38be81100a8cc94b87c17935745d4ba9',1,'iksdl::Window']]]
 ];

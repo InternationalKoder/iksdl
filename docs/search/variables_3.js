@@ -1,9 +1,22 @@
 var searchData=
 [
-  ['m_5fcolor_640',['m_color',['../classiksdl_1_1_abstract_rectangle.html#af32f1fd9bee844f84eda6fcfda5a0dfb',1,'iksdl::AbstractRectangle::m_color()'],['../classiksdl_1_1_abstract_rectangle_array.html#a8142d9516125a92368d8eb780be85d36',1,'iksdl::AbstractRectangleArray::m_color()']]],
-  ['m_5frect_641',['m_rect',['../classiksdl_1_1_abstract_rectangle.html#a8f007ec70772c1f4a7152263e8d5cc6c',1,'iksdl::AbstractRectangle']]],
-  ['m_5frects_642',['m_rects',['../classiksdl_1_1_abstract_rectangle_array.html#ae51521e1907273b473e5a7c67f5802e5',1,'iksdl::AbstractRectangleArray']]],
-  ['mousebuttoneventsenabled_643',['mouseButtonEventsEnabled',['../structiksdl_1_1_event_support.html#a4bf11afcc31011c16dafdf0bebd3e9b4',1,'iksdl::EventSupport']]],
-  ['mousemotioneventsenabled_644',['mouseMotionEventsEnabled',['../structiksdl_1_1_event_support.html#a3da718ad7af2a085a16900dad7766cfd',1,'iksdl::EventSupport']]],
-  ['mousewheeleventsenabled_645',['mouseWheelEventsEnabled',['../structiksdl_1_1_event_support.html#ab6bfea0b011c29ed0d2019d3f0589ca8',1,'iksdl::EventSupport']]]
+  ['m_5fbackgroundcolor_711',['m_backgroundColor',['../classiksdl_1_1_base_text.html#aceeff933958b80f8a6f58071f88d5ce8',1,'iksdl::BaseText']]],
+  ['m_5fcolor_712',['m_color',['../classiksdl_1_1_abstract_rectangle.html#af32f1fd9bee844f84eda6fcfda5a0dfb',1,'iksdl::AbstractRectangle::m_color()'],['../classiksdl_1_1_abstract_rectangle_array.html#a8142d9516125a92368d8eb780be85d36',1,'iksdl::AbstractRectangleArray::m_color()'],['../classiksdl_1_1_abstract_rectangle_arrayf.html#ac0dd082dd570b86e8c82669243c3da52',1,'iksdl::AbstractRectangleArrayf::m_color()'],['../classiksdl_1_1_abstract_rectanglef.html#aa445938145bc7dcee78e4ccf8a52f710',1,'iksdl::AbstractRectanglef::m_color()'],['../classiksdl_1_1_base_text.html#a24df3777899b540ea4963562400dacbf',1,'iksdl::BaseText::m_color()']]],
+  ['m_5fencoding_713',['m_encoding',['../classiksdl_1_1_base_text.html#a615b0cc1b53cfebd55f4168c90e31525',1,'iksdl::BaseText']]],
+  ['m_5fflip_714',['m_flip',['../classiksdl_1_1_base_sprite.html#a2160cc33e7494a82af3a096f208b0724',1,'iksdl::BaseSprite::m_flip()'],['../classiksdl_1_1_base_text.html#aa7d01fbe273544a314b90974de27a878',1,'iksdl::BaseText::m_flip()']]],
+  ['m_5ffont_715',['m_font',['../classiksdl_1_1_base_text.html#a46a51b294c4aa3f500cb464c1d97c79b',1,'iksdl::BaseText']]],
+  ['m_5frect_716',['m_rect',['../classiksdl_1_1_abstract_rectangle.html#a8f007ec70772c1f4a7152263e8d5cc6c',1,'iksdl::AbstractRectangle::m_rect()'],['../classiksdl_1_1_abstract_rectanglef.html#a5b37bbf96573a03cd648d1167ba6eb95',1,'iksdl::AbstractRectanglef::m_rect()']]],
+  ['m_5frects_717',['m_rects',['../classiksdl_1_1_abstract_rectangle_array.html#ae51521e1907273b473e5a7c67f5802e5',1,'iksdl::AbstractRectangleArray::m_rects()'],['../classiksdl_1_1_abstract_rectangle_arrayf.html#a59e7f25a29fec4710e0f22a143984ed0',1,'iksdl::AbstractRectangleArrayf::m_rects()']]],
+  ['m_5frenderer_718',['m_renderer',['../classiksdl_1_1_base_text.html#a03200e7128a2dfd7b66b1bdf2902c54c',1,'iksdl::BaseText']]],
+  ['m_5frendermode_719',['m_renderMode',['../classiksdl_1_1_base_text.html#a1c957b29ba4cfa82a580348b9e43ea84',1,'iksdl::BaseText']]],
+  ['m_5frotation_720',['m_rotation',['../classiksdl_1_1_base_sprite.html#aeac57550cf8a42c74a44f8d3c15f3e88',1,'iksdl::BaseSprite::m_rotation()'],['../classiksdl_1_1_base_text.html#acedf2a563dff873d7bbc01fabda7e99d',1,'iksdl::BaseText::m_rotation()']]],
+  ['m_5fscale_721',['m_scale',['../classiksdl_1_1_base_sprite.html#a9f4b498137e0d5aacd2b6eebc5545eab',1,'iksdl::BaseSprite::m_scale()'],['../classiksdl_1_1_base_text.html#a8dcabc7981711af1b822d2a2af27fd6c',1,'iksdl::BaseText::m_scale()']]],
+  ['m_5ftext_722',['m_text',['../classiksdl_1_1_base_text.html#a526afd9d01122009ae460ec57ba2b97d',1,'iksdl::BaseText']]],
+  ['m_5ftexture_723',['m_texture',['../classiksdl_1_1_base_sprite.html#aed3f49b319301b36913686a048a0529f',1,'iksdl::BaseSprite::m_texture()'],['../classiksdl_1_1_base_text.html#aee3c89f4c0240c7f79b87080a518b6f8',1,'iksdl::BaseText::m_texture()']]],
+  ['m_5ftexturerect_724',['m_textureRect',['../classiksdl_1_1_base_sprite.html#a301a42082f90018971d03667179225a7',1,'iksdl::BaseSprite']]],
+  ['m_5ftexturerectptr_725',['m_textureRectPtr',['../classiksdl_1_1_base_sprite.html#a52441eca46029154a413d5822ec842a1',1,'iksdl::BaseSprite']]],
+  ['m_5funicodetext_726',['m_unicodeText',['../classiksdl_1_1_base_text.html#ae92518e87556b0e57b03a11c98b8d9da',1,'iksdl::BaseText']]],
+  ['mousebuttoneventsenabled_727',['mouseButtonEventsEnabled',['../structiksdl_1_1_event_support.html#a4bf11afcc31011c16dafdf0bebd3e9b4',1,'iksdl::EventSupport']]],
+  ['mousemotioneventsenabled_728',['mouseMotionEventsEnabled',['../structiksdl_1_1_event_support.html#a3da718ad7af2a085a16900dad7766cfd',1,'iksdl::EventSupport']]],
+  ['mousewheeleventsenabled_729',['mouseWheelEventsEnabled',['../structiksdl_1_1_event_support.html#ab6bfea0b011c29ed0d2019d3f0589ca8',1,'iksdl::EventSupport']]]
 ];

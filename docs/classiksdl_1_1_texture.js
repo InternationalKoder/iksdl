@@ -11,5 +11,5 @@ var classiksdl_1_1_texture =
     [ "setAlphaBlending", "classiksdl_1_1_texture.html#a0991eb081a661d12d5f82814aef8fac2", null ],
     [ "setColorModulation", "classiksdl_1_1_texture.html#a2e8a44b2f3216204bc829898399afd19", null ],
     [ "Sprite", "classiksdl_1_1_texture.html#a3292175d54d93d126ba2829249316344", null ],
-    [ "Text", "classiksdl_1_1_texture.html#aee0ad1dafe471596e6d25530d9fbaf0c", null ]
+    [ "Spritef", "classiksdl_1_1_texture.html#aa5a287dfc0c6cf96c6cd42c5a69b4423", null ]
 ];

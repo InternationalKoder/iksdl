@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('_line_array_8hpp.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">LineArray.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -93,22 +94,31 @@ $(document).ready(function(){initNavTree('_line_array_8hpp.html',''); initResiza
 <div class="textblock"><code>#include &quot;<a class="el" href="_drawable_8hpp_source.html">iksdl/Drawable.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_color_8hpp_source.html">iksdl/Color.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_position_8hpp_source.html">iksdl/Position.hpp</a>&quot;</code><br />
-<code>#include &quot;iksdl/iksdl_export.hpp&quot;</code><br />
 <code>#include &lt;SDL.h&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="_line_array_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_line_array.html">iksdl::LineArray</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of connected lines that can be drawn.  <a href="classiksdl_1_1_line_array.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_line_array.html">iksdl::BaseLineArray&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of connected lines that can be drawn.  <a href="classiksdl_1_1_base_line_array.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceiksdl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html">iksdl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aac858d1a3488ce993e811aff9e862f55"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html#aac858d1a3488ce993e811aff9e862f55">iksdl::LineArray</a> = BaseLineArray&lt; Positioni &gt;</td></tr>
+<tr class="memdesc:aac858d1a3488ce993e811aff9e862f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line array using <code>int</code> coordinates.  <a href="namespaceiksdl.html#aac858d1a3488ce993e811aff9e862f55">More...</a><br /></td></tr>
+<tr class="separator:aac858d1a3488ce993e811aff9e862f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5f93eceed77accf05b42c73a62651a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html#a5a5f93eceed77accf05b42c73a62651a">iksdl::LineArrayf</a> = BaseLineArray&lt; Positionf &gt;</td></tr>
+<tr class="memdesc:a5a5f93eceed77accf05b42c73a62651a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line array using <code>float</code> coordinates.  <a href="namespaceiksdl.html#a5a5f93eceed77accf05b42c73a62651a">More...</a><br /></td></tr>
+<tr class="separator:a5a5f93eceed77accf05b42c73a62651a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

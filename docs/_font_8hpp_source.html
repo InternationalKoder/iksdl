@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('_font_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classiksdl_1_1_font.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiksdl_1_1_font.html">Font</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classiksdl_1_1_font.html#aee0ad1dafe471596e6d25530d9fbaf0c">   45</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiksdl_1_1_text.html">Text</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classiksdl_1_1_font.html#ae8583d5be045cf947a57d9258055acd9">   45</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiksdl_1_1_base_text.html">BaseText</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
@@ -147,6 +147,7 @@ $(document).ready(function(){initNavTree('_font_8hpp_source.html',''); initResiz
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// IKSDL_FONT_HPP</span></div>
+<div class="ttc" id="aclassiksdl_1_1_base_text_html"><div class="ttname"><a href="classiksdl_1_1_base_text.html">iksdl::BaseText</a></div><div class="ttdoc">Abstract base class for a text.</div><div class="ttdef"><b>Definition:</b> BaseText.hpp:47</div></div>
 <div class="ttc" id="aclassiksdl_1_1_font_html"><div class="ttname"><a href="classiksdl_1_1_font.html">iksdl::Font</a></div><div class="ttdoc">Represents a text font.</div><div class="ttdef"><b>Definition:</b> Font.hpp:44</div></div>
 <div class="ttc" id="aclassiksdl_1_1_font_html_a01ab3c35832c46a78a7f131f3a125f1c"><div class="ttname"><a href="classiksdl_1_1_font.html#a01ab3c35832c46a78a7f131f3a125f1c">iksdl::Font::~Font</a></div><div class="ttdeci">IKSDL_EXPORT ~Font()</div><div class="ttdoc">Destructor.</div></div>
 <div class="ttc" id="aclassiksdl_1_1_font_html_a9fa18b02215adbd4bb1d4cb23d49a528"><div class="ttname"><a href="classiksdl_1_1_font.html#a9fa18b02215adbd4bb1d4cb23d49a528">iksdl::Font::Font</a></div><div class="ttdeci">Font(const Font &amp;)=delete</div></div>
@@ -154,7 +155,6 @@ $(document).ready(function(){initNavTree('_font_8hpp_source.html',''); initResiz
 <div class="ttc" id="aclassiksdl_1_1_font_html_ac672a8dedec51437822e5e7e3e810df7"><div class="ttname"><a href="classiksdl_1_1_font.html#ac672a8dedec51437822e5e7e3e810df7">iksdl::Font::Font</a></div><div class="ttdeci">IKSDL_EXPORT Font(const std::string &amp;filePath, int ptSize)</div><div class="ttdoc">Constructor loading the font from a file.</div></div>
 <div class="ttc" id="aclassiksdl_1_1_font_html_adeb6d8b025e3c8da8871061135185491"><div class="ttname"><a href="classiksdl_1_1_font.html#adeb6d8b025e3c8da8871061135185491">iksdl::Font::Font</a></div><div class="ttdeci">IKSDL_EXPORT Font(Font &amp;&amp;other)</div><div class="ttdoc">Move constructor.</div></div>
 <div class="ttc" id="aclassiksdl_1_1_font_html_aecff08d2bea41bc23fe5f049f3e1d2af"><div class="ttname"><a href="classiksdl_1_1_font.html#aecff08d2bea41bc23fe5f049f3e1d2af">iksdl::Font::operator=</a></div><div class="ttdeci">IKSDL_EXPORT Font &amp; operator=(Font &amp;&amp;other)</div><div class="ttdoc">Move assignment operator.</div></div>
-<div class="ttc" id="aclassiksdl_1_1_text_html"><div class="ttname"><a href="classiksdl_1_1_text.html">iksdl::Text</a></div><div class="ttdoc">A text that can be drawn.</div><div class="ttdef"><b>Definition:</b> Text.hpp:53</div></div>
 <div class="ttc" id="anamespaceiksdl_html"><div class="ttname"><a href="namespaceiksdl.html">iksdl</a></div><div class="ttdef"><b>Definition:</b> AbstractEvent.hpp:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

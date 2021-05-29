@@ -9,6 +9,18 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     [ "AbstractRectangleArray.hpp", "_abstract_rectangle_array_8hpp.html", [
       [ "AbstractRectangleArray", "classiksdl_1_1_abstract_rectangle_array.html", "classiksdl_1_1_abstract_rectangle_array" ]
     ] ],
+    [ "AbstractRectangleArrayf.hpp", "_abstract_rectangle_arrayf_8hpp.html", [
+      [ "AbstractRectangleArrayf", "classiksdl_1_1_abstract_rectangle_arrayf.html", "classiksdl_1_1_abstract_rectangle_arrayf" ]
+    ] ],
+    [ "AbstractRectanglef.hpp", "_abstract_rectanglef_8hpp.html", [
+      [ "AbstractRectanglef", "classiksdl_1_1_abstract_rectanglef.html", "classiksdl_1_1_abstract_rectanglef" ]
+    ] ],
+    [ "BaseSprite.hpp", "_base_sprite_8hpp.html", [
+      [ "BaseSprite", "classiksdl_1_1_base_sprite.html", "classiksdl_1_1_base_sprite" ]
+    ] ],
+    [ "BaseText.hpp", "_base_text_8hpp.html", [
+      [ "BaseText", "classiksdl_1_1_base_text.html", "classiksdl_1_1_base_text" ]
+    ] ],
     [ "Channels.hpp", "_channels_8hpp.html", "_channels_8hpp" ],
     [ "Color.hpp", "_color_8hpp.html", [
       [ "Color", "classiksdl_1_1_color.html", "classiksdl_1_1_color" ]
@@ -32,6 +44,12 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     [ "FillRectangleArray.hpp", "_fill_rectangle_array_8hpp.html", [
       [ "FillRectangleArray", "classiksdl_1_1_fill_rectangle_array.html", "classiksdl_1_1_fill_rectangle_array" ]
     ] ],
+    [ "FillRectangleArrayf.hpp", "_fill_rectangle_arrayf_8hpp.html", [
+      [ "FillRectangleArrayf", "classiksdl_1_1_fill_rectangle_arrayf.html", "classiksdl_1_1_fill_rectangle_arrayf" ]
+    ] ],
+    [ "FillRectanglef.hpp", "_fill_rectanglef_8hpp.html", [
+      [ "FillRectanglef", "classiksdl_1_1_fill_rectanglef.html", "classiksdl_1_1_fill_rectanglef" ]
+    ] ],
     [ "Font.hpp", "_font_8hpp.html", [
       [ "Font", "classiksdl_1_1_font.html", "classiksdl_1_1_font" ]
     ] ],
@@ -44,12 +62,8 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     [ "KeyboardEvent.hpp", "_keyboard_event_8hpp.html", [
       [ "KeyboardEvent", "classiksdl_1_1_keyboard_event.html", "classiksdl_1_1_keyboard_event" ]
     ] ],
-    [ "Line.hpp", "_line_8hpp.html", [
-      [ "Line", "classiksdl_1_1_line.html", "classiksdl_1_1_line" ]
-    ] ],
-    [ "LineArray.hpp", "_line_array_8hpp.html", [
-      [ "LineArray", "classiksdl_1_1_line_array.html", "classiksdl_1_1_line_array" ]
-    ] ],
+    [ "Line.hpp", "_line_8hpp.html", "_line_8hpp" ],
+    [ "LineArray.hpp", "_line_array_8hpp.html", "_line_array_8hpp" ],
     [ "Mouse.hpp", "_mouse_8hpp.html", [
       [ "Mouse", "classiksdl_1_1_mouse.html", "classiksdl_1_1_mouse" ]
     ] ],
@@ -65,12 +79,8 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     [ "Music.hpp", "_music_8hpp.html", [
       [ "Music", "classiksdl_1_1_music.html", "classiksdl_1_1_music" ]
     ] ],
-    [ "Point.hpp", "_point_8hpp.html", [
-      [ "Point", "classiksdl_1_1_point.html", "classiksdl_1_1_point" ]
-    ] ],
-    [ "PointArray.hpp", "_point_array_8hpp.html", [
-      [ "PointArray", "classiksdl_1_1_point_array.html", "classiksdl_1_1_point_array" ]
-    ] ],
+    [ "Point.hpp", "_point_8hpp.html", "_point_8hpp" ],
+    [ "PointArray.hpp", "_point_array_8hpp.html", "_point_array_8hpp" ],
     [ "Position.hpp", "_position_8hpp.html", "_position_8hpp" ],
     [ "QuitEvent.hpp", "_quit_event_8hpp.html", [
       [ "QuitEvent", "classiksdl_1_1_quit_event.html", "classiksdl_1_1_quit_event" ]
@@ -81,6 +91,12 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     ] ],
     [ "RectangleArray.hpp", "_rectangle_array_8hpp.html", [
       [ "RectangleArray", "classiksdl_1_1_rectangle_array.html", "classiksdl_1_1_rectangle_array" ]
+    ] ],
+    [ "RectangleArrayf.hpp", "_rectangle_arrayf_8hpp.html", [
+      [ "RectangleArrayf", "classiksdl_1_1_rectangle_arrayf.html", "classiksdl_1_1_rectangle_arrayf" ]
+    ] ],
+    [ "Rectanglef.hpp", "_rectanglef_8hpp.html", [
+      [ "Rectanglef", "classiksdl_1_1_rectanglef.html", "classiksdl_1_1_rectanglef" ]
     ] ],
     [ "Renderer.hpp", "_renderer_8hpp.html", [
       [ "Renderer", "classiksdl_1_1_renderer.html", "classiksdl_1_1_renderer" ]
@@ -98,8 +114,14 @@ var dir_b1e1cba85778c41de6c774d28698d9a4 =
     [ "Sprite.hpp", "_sprite_8hpp.html", [
       [ "Sprite", "classiksdl_1_1_sprite.html", "classiksdl_1_1_sprite" ]
     ] ],
+    [ "Spritef.hpp", "_spritef_8hpp.html", [
+      [ "Spritef", "classiksdl_1_1_spritef.html", "classiksdl_1_1_spritef" ]
+    ] ],
     [ "Text.hpp", "_text_8hpp.html", [
       [ "Text", "classiksdl_1_1_text.html", "classiksdl_1_1_text" ]
+    ] ],
+    [ "Textf.hpp", "_textf_8hpp.html", [
+      [ "Textf", "classiksdl_1_1_textf.html", "classiksdl_1_1_textf" ]
     ] ],
     [ "Texture.hpp", "_texture_8hpp.html", [
       [ "Texture", "classiksdl_1_1_texture.html", "classiksdl_1_1_texture" ]

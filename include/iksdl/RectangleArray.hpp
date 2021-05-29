@@ -39,7 +39,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief An array of rectangles that can be drawn
+/// \brief An array of rectangles that can be drawn using \c int coordinates
 ///
 /// \see Rectangle
 /////////////////////////////////////////////////

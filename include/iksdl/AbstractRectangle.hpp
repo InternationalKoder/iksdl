@@ -35,7 +35,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief Gathers the common code related to the drawing of rectangles
+/// \brief Gathers the common code related to the drawing of rectangles using \c int coordinates
 /////////////////////////////////////////////////
 class AbstractRectangle : public Drawable
 {

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -86,15 +86,63 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>m_backgroundColor
+: <a class="el" href="classiksdl_1_1_base_text.html#aceeff933958b80f8a6f58071f88d5ce8">iksdl::BaseText</a>
+</li>
 <li>m_color
 : <a class="el" href="classiksdl_1_1_abstract_rectangle.html#af32f1fd9bee844f84eda6fcfda5a0dfb">iksdl::AbstractRectangle</a>
 , <a class="el" href="classiksdl_1_1_abstract_rectangle_array.html#a8142d9516125a92368d8eb780be85d36">iksdl::AbstractRectangleArray</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectangle_arrayf.html#ac0dd082dd570b86e8c82669243c3da52">iksdl::AbstractRectangleArrayf</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectanglef.html#aa445938145bc7dcee78e4ccf8a52f710">iksdl::AbstractRectanglef</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a24df3777899b540ea4963562400dacbf">iksdl::BaseText</a>
+</li>
+<li>m_encoding
+: <a class="el" href="classiksdl_1_1_base_text.html#a615b0cc1b53cfebd55f4168c90e31525">iksdl::BaseText</a>
+</li>
+<li>m_flip
+: <a class="el" href="classiksdl_1_1_base_sprite.html#a2160cc33e7494a82af3a096f208b0724">iksdl::BaseSprite</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#aa7d01fbe273544a314b90974de27a878">iksdl::BaseText</a>
+</li>
+<li>m_font
+: <a class="el" href="classiksdl_1_1_base_text.html#a46a51b294c4aa3f500cb464c1d97c79b">iksdl::BaseText</a>
 </li>
 <li>m_rect
 : <a class="el" href="classiksdl_1_1_abstract_rectangle.html#a8f007ec70772c1f4a7152263e8d5cc6c">iksdl::AbstractRectangle</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectanglef.html#a5b37bbf96573a03cd648d1167ba6eb95">iksdl::AbstractRectanglef</a>
 </li>
 <li>m_rects
 : <a class="el" href="classiksdl_1_1_abstract_rectangle_array.html#ae51521e1907273b473e5a7c67f5802e5">iksdl::AbstractRectangleArray</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectangle_arrayf.html#a59e7f25a29fec4710e0f22a143984ed0">iksdl::AbstractRectangleArrayf</a>
+</li>
+<li>m_renderer
+: <a class="el" href="classiksdl_1_1_base_text.html#a03200e7128a2dfd7b66b1bdf2902c54c">iksdl::BaseText</a>
+</li>
+<li>m_renderMode
+: <a class="el" href="classiksdl_1_1_base_text.html#a1c957b29ba4cfa82a580348b9e43ea84">iksdl::BaseText</a>
+</li>
+<li>m_rotation
+: <a class="el" href="classiksdl_1_1_base_sprite.html#aeac57550cf8a42c74a44f8d3c15f3e88">iksdl::BaseSprite</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#acedf2a563dff873d7bbc01fabda7e99d">iksdl::BaseText</a>
+</li>
+<li>m_scale
+: <a class="el" href="classiksdl_1_1_base_sprite.html#a9f4b498137e0d5aacd2b6eebc5545eab">iksdl::BaseSprite</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#a8dcabc7981711af1b822d2a2af27fd6c">iksdl::BaseText</a>
+</li>
+<li>m_text
+: <a class="el" href="classiksdl_1_1_base_text.html#a526afd9d01122009ae460ec57ba2b97d">iksdl::BaseText</a>
+</li>
+<li>m_texture
+: <a class="el" href="classiksdl_1_1_base_sprite.html#aed3f49b319301b36913686a048a0529f">iksdl::BaseSprite</a>
+, <a class="el" href="classiksdl_1_1_base_text.html#aee3c89f4c0240c7f79b87080a518b6f8">iksdl::BaseText</a>
+</li>
+<li>m_textureRect
+: <a class="el" href="classiksdl_1_1_base_sprite.html#a301a42082f90018971d03667179225a7">iksdl::BaseSprite</a>
+</li>
+<li>m_textureRectPtr
+: <a class="el" href="classiksdl_1_1_base_sprite.html#a52441eca46029154a413d5822ec842a1">iksdl::BaseSprite</a>
+</li>
+<li>m_unicodeText
+: <a class="el" href="classiksdl_1_1_base_text.html#ae92518e87556b0e57b03a11c98b8d9da">iksdl::BaseText</a>
 </li>
 <li>maximized()
 : <a class="el" href="classiksdl_1_1_window_options.html#a89fc2535a86c126d58600f9aa07189b2">iksdl::WindowOptions</a>
@@ -132,10 +180,14 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>move()
 : <a class="el" href="classiksdl_1_1_abstract_rectangle.html#a1fb95afb0df28ac97634c75556ee550b">iksdl::AbstractRectangle</a>
 , <a class="el" href="classiksdl_1_1_abstract_rectangle_array.html#af53a66173ac443bc6e5f38a2dfd424ec">iksdl::AbstractRectangleArray</a>
-, <a class="el" href="classiksdl_1_1_line.html#a0c974bf77d8eca5185984cf5f994dbbf">iksdl::Line</a>
-, <a class="el" href="classiksdl_1_1_point.html#afb384bb151aefa0e5d6a128a2b6fdd60">iksdl::Point</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectangle_arrayf.html#a5f61c8a857b69291e31cdc27376269b9">iksdl::AbstractRectangleArrayf</a>
+, <a class="el" href="classiksdl_1_1_abstract_rectanglef.html#ab84889183349c1b3f7653fdb9b2c8fe4">iksdl::AbstractRectanglef</a>
+, <a class="el" href="classiksdl_1_1_base_line.html#a333a04e8317ae26891f4eb5737c128dc">iksdl::BaseLine&lt; T &gt;</a>
+, <a class="el" href="classiksdl_1_1_base_point.html#a4dd8fa5be13955ac8d1c8c8e37199848">iksdl::BasePoint&lt; T &gt;</a>
 , <a class="el" href="classiksdl_1_1_sprite.html#a7afe59c07870dcf817627f0a8dc76354">iksdl::Sprite</a>
+, <a class="el" href="classiksdl_1_1_spritef.html#a14c3bf41ba1ce278c6cc28e003c82aa3">iksdl::Spritef</a>
 , <a class="el" href="classiksdl_1_1_text.html#a42653e7b7a38f41e2a2c4e90e706aade">iksdl::Text</a>
+, <a class="el" href="classiksdl_1_1_textf.html#a8bf81eec368b02066e4bdd80aafcbd8e">iksdl::Textf</a>
 </li>
 <li>Music()
 : <a class="el" href="classiksdl_1_1_music.html#a688f28761549f51bd66bf0396f49fda6">iksdl::Music</a>

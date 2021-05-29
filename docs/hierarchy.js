@@ -19,12 +19,26 @@ var hierarchy =
         [ "iksdl::FillRectangleArray", "classiksdl_1_1_fill_rectangle_array.html", null ],
         [ "iksdl::RectangleArray", "classiksdl_1_1_rectangle_array.html", null ]
       ] ],
-      [ "iksdl::Line", "classiksdl_1_1_line.html", null ],
-      [ "iksdl::LineArray", "classiksdl_1_1_line_array.html", null ],
-      [ "iksdl::Point", "classiksdl_1_1_point.html", null ],
-      [ "iksdl::PointArray", "classiksdl_1_1_point_array.html", null ],
-      [ "iksdl::Sprite", "classiksdl_1_1_sprite.html", null ],
-      [ "iksdl::Text", "classiksdl_1_1_text.html", null ]
+      [ "iksdl::AbstractRectangleArrayf", "classiksdl_1_1_abstract_rectangle_arrayf.html", [
+        [ "iksdl::FillRectangleArrayf", "classiksdl_1_1_fill_rectangle_arrayf.html", null ],
+        [ "iksdl::RectangleArrayf", "classiksdl_1_1_rectangle_arrayf.html", null ]
+      ] ],
+      [ "iksdl::AbstractRectanglef", "classiksdl_1_1_abstract_rectanglef.html", [
+        [ "iksdl::FillRectanglef", "classiksdl_1_1_fill_rectanglef.html", null ],
+        [ "iksdl::Rectanglef", "classiksdl_1_1_rectanglef.html", null ]
+      ] ],
+      [ "iksdl::BaseLine< T >", "classiksdl_1_1_base_line.html", null ],
+      [ "iksdl::BaseLineArray< T >", "classiksdl_1_1_base_line_array.html", null ],
+      [ "iksdl::BasePoint< T >", "classiksdl_1_1_base_point.html", null ],
+      [ "iksdl::BasePointArray< T >", "classiksdl_1_1_base_point_array.html", null ],
+      [ "iksdl::BaseSprite", "classiksdl_1_1_base_sprite.html", [
+        [ "iksdl::Sprite", "classiksdl_1_1_sprite.html", null ],
+        [ "iksdl::Spritef", "classiksdl_1_1_spritef.html", null ]
+      ] ],
+      [ "iksdl::BaseText", "classiksdl_1_1_base_text.html", [
+        [ "iksdl::Text", "classiksdl_1_1_text.html", null ],
+        [ "iksdl::Textf", "classiksdl_1_1_textf.html", null ]
+      ] ]
     ] ],
     [ "iksdl::Event", "classiksdl_1_1_event.html", null ],
     [ "iksdl::EventHandler", "classiksdl_1_1_event_handler.html", null ],

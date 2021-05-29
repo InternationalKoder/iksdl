@@ -24,7 +24,6 @@
 #define IKSDL_SIZE_HPP
 
 #include "iksdl/common.hpp"
-#include "iksdl/iksdl_export.hpp"
 
 namespace iksdl
 {
