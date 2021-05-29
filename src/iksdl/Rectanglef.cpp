@@ -20,19 +20,13 @@
  *
  */
 
-#include "iksdl/Point.hpp"
-#include <SDL.h>
+#include "iksdl/Rectanglef.hpp"
 
 namespace iksdl
 {
-Point::Point(Positioni position, Color color) :
-    m_position(std::move(position)),
-    m_color(std::move(color))
-{}
-
-void Point::draw(SDL_Renderer* const renderer) const
+void Rectanglef::draw(SDL_Renderer* const renderer) const
 {
     SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
-    SDL_RenderDrawPoint(renderer, m_position.getX(), m_position.getY());
+    SDL_RenderDrawRectF(renderer, &m_rect);
 }
 }

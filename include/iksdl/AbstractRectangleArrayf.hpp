@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_ABSTRACT_RECTANGLE_ARRAY_HPP
-#define IKSDL_ABSTRACT_RECTANGLE_ARRAY_HPP
+#ifndef IKSDL_ABSTRACT_RECTANGLE_ARRAYF_HPP
+#define IKSDL_ABSTRACT_RECTANGLE_ARRAYF_HPP
 
 #include "iksdl/Drawable.hpp"
 #include "iksdl/Position.hpp"
@@ -36,7 +36,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief Gathers the common code related to the drawing of rectangle arrays using \c int coordinates
+/// \brief Gathers the common code related to the drawing of rectangle arrays using \c float coordinates
 ///
 /// This is the recommended approach when drawing several rectangles.
 /// It is faster than drawing all the rectangles individually,
@@ -44,7 +44,7 @@ namespace iksdl
 ///
 /// \warning All the rectangles in the array are drawn with the same color
 /////////////////////////////////////////////////
-class AbstractRectangleArray : public Drawable
+class AbstractRectangleArrayf : public Drawable
 {
     public:
 
@@ -53,7 +53,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \param color Drawing color for all the rectangles
         /////////////////////////////////////////////////
-        IKSDL_EXPORT explicit AbstractRectangleArray(Color color);
+        IKSDL_EXPORT explicit AbstractRectangleArrayf(Color color);
 
         /////////////////////////////////////////////////
         /// \brief Constructor to define a populated array
@@ -61,14 +61,14 @@ class AbstractRectangleArray : public Drawable
         /// \param rects Rectangles to draw
         /// \param color Drawing color for all the rectangles
         /////////////////////////////////////////////////
-        IKSDL_EXPORT AbstractRectangleArray(const std::vector<Recti>& rects, Color color);
+        IKSDL_EXPORT AbstractRectangleArrayf(const std::vector<Rectf>& rects, Color color);
 
         /////////////////////////////////////////////////
         /// \brief Add a new rectangle at the end of the array
         ///
         /// \param rect New rectangle to draw
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void pushBack(const Recti& rect) { m_rects.push_back(rectToSdl(rect)); }
+        IKSDL_EXPORT inline void pushBack(const Rectf& rect) { m_rects.push_back(rectToSdl(rect)); }
 
         /////////////////////////////////////////////////
         /// \brief Remove the last rectangle from the array
@@ -89,7 +89,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \return Position and size of the rectangle at the given array index
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Recti operator[](size_t index) const { return Recti(m_rects[index].x, m_rects[index].y, m_rects[index].w, m_rects[index].h); }
+        IKSDL_EXPORT inline Rectf operator[](size_t index) const { return Rectf(m_rects[index].x, m_rects[index].y, m_rects[index].w, m_rects[index].h); }
 
         /////////////////////////////////////////////////
         /// \brief Move a rectangle to another position
@@ -101,7 +101,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \see setPosition
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void move(size_t index, const Positioni& delta) { m_rects[index].x += delta.getX(); m_rects[index].y += delta.getY(); }
+        IKSDL_EXPORT inline void move(size_t index, const Positionf& delta) { m_rects[index].x += delta.getX(); m_rects[index].y += delta.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the size of a rectangle by using a scale factor
@@ -113,7 +113,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \see setSize
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void scale(size_t index, int factor) { m_rects[index].w *= factor; m_rects[index].h *= factor; }
+        IKSDL_EXPORT inline void scale(size_t index, float factor) { m_rects[index].w *= factor; m_rects[index].h *= factor; }
 
         /////////////////////////////////////////////////
         /// \brief Get the current drawing color
@@ -130,7 +130,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \see move
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(size_t index, const Positioni& position) { m_rects[index].x = position.getX(); m_rects[index].y = position.getY(); }
+        IKSDL_EXPORT inline void setPosition(size_t index, const Positionf& position) { m_rects[index].x = position.getX(); m_rects[index].y = position.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the size of a rectangle
@@ -140,7 +140,7 @@ class AbstractRectangleArray : public Drawable
         ///
         /// \see scale
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setSize(size_t index, const Sizei& size) { m_rects[index].w = size.getWidth(); m_rects[index].h = size.getHeight(); }
+        IKSDL_EXPORT inline void setSize(size_t index, const Sizef& size) { m_rects[index].w = size.getWidth(); m_rects[index].h = size.getHeight(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the drawing color
@@ -151,24 +151,24 @@ class AbstractRectangleArray : public Drawable
 
     protected:
 
-        std::vector<SDL_Rect> m_rects; ///< Array of the rectangles
-        Color m_color;                 ///< Drawing color
+        std::vector<SDL_FRect> m_rects; ///< Array of the rectangles
+        Color m_color;                  ///< Drawing color
 
     private:
 
         /////////////////////////////////////////////////
-        /// \brief Transform a \a iksdl::Recti to a \a SDL_Rect
+        /// \brief Transform a \a iksdl::Rectf to a \a SDL_FRect
         ///
         /// \param rect Rect to transform
         ///
         /// \return Same rect in the SDL structure
         /////////////////////////////////////////////////
-        static inline SDL_Rect rectToSdl(const Recti& rect)
+        static inline SDL_FRect rectToSdl(const Rectf& rect)
         {
-            return SDL_Rect({ .x = rect.getX(), .y = rect.getY(), .w = rect.getWidth(), .h = rect.getHeight() });
+            return SDL_FRect({ .x = rect.getX(), .y = rect.getY(), .w = rect.getWidth(), .h = rect.getHeight() });
         }
 };
 
 }
 
-#endif // IKSDL_ABSTRACT_RECTANGLE_ARRAY_HPP
+#endif // IKSDL_ABSTRACT_RECTANGLE_ARRAYF_HPP

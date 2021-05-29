@@ -20,20 +20,13 @@
  *
  */
 
-#include "iksdl/Line.hpp"
-#include <SDL.h>
+#include "iksdl/FillRectanglef.hpp"
 
 namespace iksdl
 {
-Line::Line(Positioni position1, Positioni position2, Color color) :
-    m_position1(std::move(position1)),
-    m_position2(std::move(position2)),
-    m_color(std::move(color))
-{}
-
-void Line::draw(SDL_Renderer* const renderer) const
+void FillRectanglef::draw(SDL_Renderer* const renderer) const
 {
     SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
-    SDL_RenderDrawLine(renderer, m_position1.getX(), m_position1.getY(), m_position2.getX(), m_position2.getY());
+    SDL_RenderFillRectF(renderer, &m_rect);
 }
 }

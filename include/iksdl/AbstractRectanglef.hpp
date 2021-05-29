@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_ABSTRACT_RECTANGLE_HPP
-#define IKSDL_ABSTRACT_RECTANGLE_HPP
+#ifndef IKSDL_ABSTRACT_RECTANGLEF_HPP
+#define IKSDL_ABSTRACT_RECTANGLEF_HPP
 
 #include "iksdl/Drawable.hpp"
 #include "iksdl/Position.hpp"
@@ -35,9 +35,9 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief Gathers the common code related to the drawing of rectangles using \c int coordinates
+/// \brief Gathers the common code related to the drawing of rectangles using \c float coordinates
 /////////////////////////////////////////////////
-class AbstractRectangle : public Drawable
+class AbstractRectanglef : public Drawable
 {
     public:
 
@@ -49,7 +49,7 @@ class AbstractRectangle : public Drawable
         /// \param rect  Position and size of the rectangle to draw
         /// \param color Drawing color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT AbstractRectangle(const Recti& rect, Color color);
+        IKSDL_EXPORT AbstractRectanglef(const Rectf& rect, Color color);
 
         /////////////////////////////////////////////////
         /// \brief Constructor that creates the base of a rectangle to draw
@@ -60,7 +60,7 @@ class AbstractRectangle : public Drawable
         /// \param size     Size of the rectangle to draw
         /// \param color    Drawing color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT AbstractRectangle(const Positioni& position, const Sizei& size, Color color);
+        IKSDL_EXPORT AbstractRectanglef(const Positionf& position, const Sizef& size, Color color);
 
         /////////////////////////////////////////////////
         /// \brief Move the rectangle to another position
@@ -71,7 +71,7 @@ class AbstractRectangle : public Drawable
         ///
         /// \see setPosition
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void move(const Positioni& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
+        IKSDL_EXPORT inline void move(const Positionf& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the size by using a scale factor
@@ -82,21 +82,21 @@ class AbstractRectangle : public Drawable
         ///
         /// \see setSize
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void scale(int factor) { m_rect.w *= factor; m_rect.h *= factor; }
+        IKSDL_EXPORT inline void scale(float factor) { m_rect.w *= factor; m_rect.h *= factor; }
 
         /////////////////////////////////////////////////
         /// \brief Get the current position
         ///
         /// \return The current position of the top-left corner
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Positioni getPosition() const { return Positioni(m_rect.x, m_rect.y); }
+        IKSDL_EXPORT inline Positionf getPosition() const { return Positionf(m_rect.x, m_rect.y); }
 
         /////////////////////////////////////////////////
         /// \brief Get the current size
         ///
         /// \return The current size of the rectangle
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Sizei getSize() const { return Sizei(m_rect.w, m_rect.h); }
+        IKSDL_EXPORT inline Sizef getSize() const { return Sizef(m_rect.w, m_rect.h); }
 
         /////////////////////////////////////////////////
         /// \brief Get the current drawing color
@@ -114,7 +114,7 @@ class AbstractRectangle : public Drawable
         ///
         /// \see move
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(const Positioni& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
+        IKSDL_EXPORT inline void setPosition(const Positionf& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the size of the rectangle
@@ -123,7 +123,7 @@ class AbstractRectangle : public Drawable
         ///
         /// \see scale
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setSize(const Sizei& size) { m_rect.w = size.getWidth(); m_rect.h = size.getHeight(); }
+        IKSDL_EXPORT inline void setSize(const Sizef& size) { m_rect.w = size.getWidth(); m_rect.h = size.getHeight(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the drawing color
@@ -134,10 +134,10 @@ class AbstractRectangle : public Drawable
 
     protected:
 
-        SDL_Rect m_rect; ///< Position and size
+        SDL_FRect m_rect; ///< Position and size
         Color m_color;   ///< Drawing color
 };
 
 }
 
-#endif // IKSDL_ABSTRACT_RECTANGLE_HPP
+#endif // IKSDL_ABSTRACT_RECTANGLEF_HPP

@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_TEXT_HPP
-#define IKSDL_TEXT_HPP
+#ifndef IKSDL_TEXT_F_HPP
+#define IKSDL_TEXT_F_HPP
 
 #include "iksdl/BaseText.hpp"
 #include "iksdl/Position.hpp"
@@ -37,9 +37,9 @@ class Renderer;
 class Font;
 
 /////////////////////////////////////////////////
-/// \brief A text that can be drawn using \c int coordinates
+/// \brief A text that can be drawn using \c float coordinates
 /////////////////////////////////////////////////
-class Text : public BaseText
+class Textf : public BaseText
 {
     public:
 
@@ -56,8 +56,8 @@ class Text : public BaseText
         /// \param encoding   String encoding
         /// \param renderMode Rendering mode to use when drawing the text
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Text(const Renderer& renderer, const Font& font, std::string text, const Positioni& position,
-                          const Color& color, Encoding encoding = Encoding::Latin1, RenderMode renderMode = RenderMode::Blended);
+        IKSDL_EXPORT Textf(const Renderer& renderer, const Font& font, std::string text, const Positionf& position,
+                           const Color& color, Encoding encoding = Encoding::Latin1, RenderMode renderMode = RenderMode::Blended);
 
         /////////////////////////////////////////////////
         /// \brief Constructor with given encoding and shaded render mode
@@ -72,8 +72,8 @@ class Text : public BaseText
         /// \param backgroundColor Color of the background rectangle
         /// \param encoding        String encoding
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Text(const Renderer& renderer, const Font& font, std::string text, const Positioni& position,
-                          const Color& color, const Color& backgroundColor, Encoding encoding = Encoding::Latin1);
+        IKSDL_EXPORT Textf(const Renderer& renderer, const Font& font, std::string text, const Positionf& position,
+                           const Color& color, const Color& backgroundColor, Encoding encoding = Encoding::Latin1);
 
         /////////////////////////////////////////////////
         /// \brief Constructor with unicode encoding and given render mode
@@ -87,8 +87,8 @@ class Text : public BaseText
         /// \param color      Text color
         /// \param renderMode Rendering mode to use when drawing the text
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Text(const Renderer& renderer, const Font& font, const std::u16string& text, const Positioni& position,
-                          const Color& color, RenderMode renderMode = RenderMode::Blended);
+        IKSDL_EXPORT Textf(const Renderer& renderer, const Font& font, const std::u16string& text, const Positionf& position,
+                           const Color& color, RenderMode renderMode = RenderMode::Blended);
 
         /////////////////////////////////////////////////
         /// \brief Constructor with unicode encoding and shaded render mode
@@ -100,8 +100,8 @@ class Text : public BaseText
         /// \param color           Text color
         /// \param backgroundColor Color of the background rectangle
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Text(const Renderer& renderer, const Font& font, const std::u16string& text, const Positioni& position,
-                          const Color& color, const Color& backgroundColor);
+        IKSDL_EXPORT Textf(const Renderer& renderer, const Font& font, const std::u16string& text, const Positionf& position,
+                           const Color& color, const Color& backgroundColor);
 
         /////////////////////////////////////////////////
         /// \brief Move the text to another position
@@ -112,7 +112,7 @@ class Text : public BaseText
         ///
         /// \see setPosition
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void move(const Positioni& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
+        IKSDL_EXPORT inline void move(const Positionf& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Draw the text
@@ -126,21 +126,21 @@ class Text : public BaseText
         ///
         /// \return Current position and size
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Recti getRect() const { return Recti(m_rect.x, m_rect.y, m_rect.w, m_rect.h); }
+        IKSDL_EXPORT inline Rectf getRect() const { return Rectf(m_rect.x, m_rect.y, m_rect.w, m_rect.h); }
 
         /////////////////////////////////////////////////
         /// \brief Get the position
         ///
         /// \return Current position
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Positioni getPosition() const { return Positioni(m_rect.x, m_rect.y); }
+        IKSDL_EXPORT inline Positionf getPosition() const { return Positionf(m_rect.x, m_rect.y); }
 
         /////////////////////////////////////////////////
         /// \brief Get the size
         ///
         /// \return Current size
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Sizei getSize() const { return Sizei(m_rect.w, m_rect.h); }
+        IKSDL_EXPORT inline Sizef getSize() const { return Sizef(m_rect.w, m_rect.h); }
 
         /////////////////////////////////////////////////
         /// \brief Change position of the text
@@ -151,14 +151,14 @@ class Text : public BaseText
         ///
         /// \see move
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(const Positioni& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
+        IKSDL_EXPORT inline void setPosition(const Positionf& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the center point that is used to apply rotation
         ///
         /// \param center New center point for rotations
         /////////////////////////////////////////////////
-        IKSDL_EXPORT void setCenter(const Positioni& center);
+        IKSDL_EXPORT void setCenter(const Positionf& center);
 
         /////////////////////////////////////////////////
         /// \brief Change the rotation center point to default
@@ -173,14 +173,18 @@ class Text : public BaseText
         /// \param width New rect width
         /// \param height New rect height
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline virtual void setRect(int width, int height) { m_rect.w = width; m_rect.h = height; }
+        IKSDL_EXPORT inline virtual void setRect(int width, int height)
+        {
+            m_rect.w = static_cast<float>(width);
+            m_rect.h = static_cast<float>(height);
+        }
 
-        SDL_Rect m_rect; ///< Position and size of the text
+        SDL_FRect m_rect; ///< Position and size of the text
 
-        SDL_Point m_center;     ///< Rotation center point
-        SDL_Point* m_centerPtr; ///< Pointer to rotation center point, or nullptr to use default center
+        SDL_FPoint m_center;     ///< Rotation center point
+        SDL_FPoint* m_centerPtr; ///< Pointer to rotation center point, or nullptr to use default center
 };
 
 }
 
-#endif // IKSDL_TEXT_HPP
+#endif // IKSDL_TEXT_F_HPP

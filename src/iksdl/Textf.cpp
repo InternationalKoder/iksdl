@@ -20,13 +20,13 @@
  *
  */
 
-#include "iksdl/Text.hpp"
+#include "iksdl/Textf.hpp"
 #include <SDL_ttf.h>
 
 namespace iksdl
 {
-Text::Text(const Renderer& renderer, const Font& font, std::string text, const Positioni& position,
-           const Color& color, Encoding encoding, RenderMode renderMode) :
+Textf::Textf(const Renderer& renderer, const Font& font, std::string text, const Positionf& position,
+             const Color& color, Encoding encoding, RenderMode renderMode) :
     BaseText(renderer, font, text, color, encoding, renderMode),
     m_rect({ .x = position.getX(), .y = position.getY() }),
     m_centerPtr(nullptr)
@@ -34,8 +34,8 @@ Text::Text(const Renderer& renderer, const Font& font, std::string text, const P
     refreshTexture();
 }
 
-Text::Text(const Renderer& renderer, const Font& font, std::string text, const Positioni& position,
-           const Color& color, const Color& backgroundColor, Encoding encoding) :
+Textf::Textf(const Renderer& renderer, const Font& font, std::string text, const Positionf& position,
+             const Color& color, const Color& backgroundColor, Encoding encoding) :
     BaseText(renderer, font, text, color, backgroundColor, encoding),
     m_rect({ .x = position.getX(), .y = position.getY() }),
     m_centerPtr(nullptr)
@@ -43,8 +43,8 @@ Text::Text(const Renderer& renderer, const Font& font, std::string text, const P
     refreshTexture();
 }
 
-Text::Text(const Renderer& renderer, const Font& font, const std::u16string& text, const Positioni& position,
-           const Color& color, RenderMode renderMode) :
+Textf::Textf(const Renderer& renderer, const Font& font, const std::u16string& text, const Positionf& position,
+             const Color& color, RenderMode renderMode) :
     BaseText(renderer, font, text, color, renderMode),
     m_rect({ .x = position.getX(), .y = position.getY() }),
     m_centerPtr(nullptr)
@@ -52,8 +52,8 @@ Text::Text(const Renderer& renderer, const Font& font, const std::u16string& tex
     refreshTexture();
 }
 
-Text::Text(const Renderer& renderer, const Font& font, const std::u16string& text, const Positioni& position,
-           const Color& color, const Color& backgroundColor) :
+Textf::Textf(const Renderer& renderer, const Font& font, const std::u16string& text, const Positionf& position,
+             const Color& color, const Color& backgroundColor) :
     BaseText(renderer, font, text, color, backgroundColor),
     m_rect({ .x = position.getX(), .y = position.getY() }),
     m_centerPtr(nullptr)
@@ -61,17 +61,17 @@ Text::Text(const Renderer& renderer, const Font& font, const std::u16string& tex
     refreshTexture();
 }
 
-void Text::draw(SDL_Renderer* const renderer) const
+void Textf::draw(SDL_Renderer* const renderer) const
 {
     if(m_rotation == 0.0 && m_flip == SDL_FLIP_NONE)
-        SDL_RenderCopy(renderer, m_texture, nullptr, &m_rect);
+        SDL_RenderCopyF(renderer, m_texture, nullptr, &m_rect);
     else
-        SDL_RenderCopyEx(renderer, m_texture, nullptr, &m_rect, m_rotation, m_centerPtr, m_flip);
+        SDL_RenderCopyExF(renderer, m_texture, nullptr, &m_rect, m_rotation, m_centerPtr, m_flip);
 }
 
-void Text::setCenter(const Positioni& center)
+void Textf::setCenter(const Positionf& center)
 {
-    m_center = SDL_Point { .x = center.getX(), .y = center.getY() };
+    m_center = SDL_FPoint { .x = center.getX(), .y = center.getY() };
     m_centerPtr = &m_center;
 }
 }

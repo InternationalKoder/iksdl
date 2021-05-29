@@ -26,12 +26,7 @@
 #include "iksdl/Drawable.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Color.hpp"
-#include "iksdl/iksdl_export.hpp"
-
-extern "C"
-{
-struct SDL_Renderer;
-}
+#include <SDL.h>
 
 namespace iksdl
 {
@@ -44,7 +39,8 @@ namespace iksdl
 ///
 /// \see PointArray
 /////////////////////////////////////////////////
-class Point : public Drawable
+template<DrawablePosition T>
+class BasePoint : public Drawable
 {
     public:
 
@@ -54,7 +50,10 @@ class Point : public Drawable
         /// \param position Position of the point
         /// \param color    Drawing color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Point(Positioni position, Color color);
+        BasePoint(T position, Color color) :
+            m_position(std::move(position)),
+            m_color(std::move(color))
+        {}
 
         /////////////////////////////////////////////////
         /// \brief Move the point to another position
@@ -65,28 +64,36 @@ class Point : public Drawable
         ///
         /// \see setPosition
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void move(const Positioni& delta) { m_position = m_position + delta; }
+        inline void move(const T& delta) { m_position = m_position + delta; }
 
         /////////////////////////////////////////////////
         /// \brief Draw the point
         ///
         /// \param renderer Renderer that will handle the drawing
         /////////////////////////////////////////////////
-        IKSDL_EXPORT virtual void draw(SDL_Renderer* const renderer) const;
+        virtual void draw(SDL_Renderer* const renderer) const
+        {
+            SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
+
+            if constexpr(std::is_same_v<T, Positioni>)
+                SDL_RenderDrawPoint(renderer, m_position.getX(), m_position.getY());
+            else
+                SDL_RenderDrawPointF(renderer, m_position.getX(), m_position.getY());
+        }
 
         /////////////////////////////////////////////////
         /// \brief Get the current position
         ///
         /// \return Current position
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline const Positioni& getPosition() const { return m_position; }
+        inline const T& getPosition() const { return m_position; }
 
         /////////////////////////////////////////////////
         /// \brief Get the drawing color
         ///
         /// \return Drawing color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline const Color& getColor() const { return m_color; }
+        inline const Color& getColor() const { return m_color; }
 
         /////////////////////////////////////////////////
         /// \brief Change the position of the point
@@ -95,20 +102,23 @@ class Point : public Drawable
         ///
         /// \see move
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(Positioni position) { m_position = std::move(position); }
+        inline void setPosition(T position) { m_position = std::move(position); }
 
         /////////////////////////////////////////////////
         /// \brief Change the drawing color
         ///
         /// \param color New color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setColor(Color color) { m_color = std::move(color); }
+        inline void setColor(Color color) { m_color = std::move(color); }
 
     private:
 
-        Positioni m_position; ///< Position of the point
-        Color m_color;        ///< Drawing color
+        T m_position;  ///< Position of the point
+        Color m_color; ///< Drawing color
 };
+
+using Point  = BasePoint<Positioni>; ///< Point using \c int coordinates
+using Pointf = BasePoint<Positionf>; ///< Point using \c float coordinates
 
 }
 

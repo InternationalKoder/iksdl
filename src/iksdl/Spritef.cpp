@@ -20,76 +20,74 @@
  *
  */
 
-#include "iksdl/Sprite.hpp"
+#include "iksdl/Spritef.hpp"
 #include "iksdl/Texture.hpp"
 
 namespace iksdl
 {
-Sprite::Sprite(const Texture& texture, const Positioni& position) :
+Spritef::Spritef(const Texture& texture, const Positionf& position) :
     BaseSprite(texture),
     m_rect({ .x = position.getX(), .y = position.getY(),
-           .w = m_texture->m_size.getWidth(), .h = m_texture->m_size.getHeight() }),
+           .w = static_cast<float>(m_texture->m_size.getWidth()), .h = static_cast<float>(m_texture->m_size.getHeight()) }),
     m_centerPtr(nullptr)
 {}
 
-Sprite::Sprite(const Texture& texture, const Positioni& position, const Recti& textureRect) :
+Spritef::Spritef(const Texture& texture, const Positionf& position, const Recti& textureRect) :
     BaseSprite(texture),
     m_rect({ .x = position.getX(), .y = position.getY(),
-           .w = m_texture->m_size.getWidth(), .h = m_texture->m_size.getHeight() }),
+           .w = static_cast<float>(m_texture->m_size.getWidth()), .h = static_cast<float>(m_texture->m_size.getHeight()) }),
     m_centerPtr(nullptr)
 {
-    Sprite::setTextureRect(textureRect);
+    Spritef::setTextureRect(textureRect);
 }
 
-void Sprite::scale(const Sizef& delta)
+void Spritef::scale(const Sizef& delta)
 {
-    m_rect.w = static_cast<int>(static_cast<float>(m_rect.w) * delta.getWidth());
-    m_rect.h = static_cast<int>(static_cast<float>(m_rect.h) * delta.getHeight());
+    m_rect.w *= delta.getWidth();
+    m_rect.h *= delta.getHeight();
     m_scale = m_scale * delta;
 }
 
-void Sprite::draw(SDL_Renderer* const renderer) const
+void Spritef::draw(SDL_Renderer* const renderer) const
 {
     if(m_rotation == 0.0 && m_flip == SDL_FLIP_NONE)
-        SDL_RenderCopy(renderer, m_texture->m_texture, m_textureRectPtr, &m_rect);
+        SDL_RenderCopyF(renderer, m_texture->m_texture, m_textureRectPtr, &m_rect);
     else
-        SDL_RenderCopyEx(renderer, m_texture->m_texture, m_textureRectPtr, &m_rect, m_rotation, m_centerPtr, m_flip);
+        SDL_RenderCopyExF(renderer, m_texture->m_texture, m_textureRectPtr, &m_rect, m_rotation, m_centerPtr, m_flip);
 }
 
-void Sprite::setTextureRect(const Recti& rect)
+void Spritef::setTextureRect(const Recti& rect)
 {
     // Update the rect to match the new texture rect's size
     if(rect.getWidth() != m_rect.w || rect.getHeight() != m_rect.h)
     {
-        const float fw = static_cast<float>(m_rect.w);
-        const float fh = static_cast<float>(m_rect.h);
-        m_rect.w = static_cast<int>(fw / (fw / static_cast<float>(rect.getWidth())));
-        m_rect.h = static_cast<int>(fh / (fh / static_cast<float>(rect.getHeight())));
+        m_rect.w /= m_rect.w / rect.getWidth();
+        m_rect.h /= m_rect.h / rect.getHeight();
     }
 
     // Apply current scale
-    m_rect.w = static_cast<int>(static_cast<float>(m_rect.w) * m_scale.getWidth());
-    m_rect.h = static_cast<int>(static_cast<float>(m_rect.h) * m_scale.getHeight());
+    m_rect.w *= m_scale.getWidth();
+    m_rect.h *= m_scale.getHeight();
 
     // Change texture rect
     m_textureRect = { .x = rect.getX(), .y = rect.getY(), .w = rect.getWidth(), .h = rect.getHeight() };
     m_textureRectPtr = &m_textureRect;
 }
 
-void Sprite::resetTextureRect()
+void Spritef::resetTextureRect()
 {
     // Update the rect to match the full texture's size and apply current scale
     const Sizei& textureSize = m_texture->getSize();
-    m_rect.w = static_cast<int>(static_cast<float>(textureSize.getWidth()) * m_scale.getWidth());
-    m_rect.h = static_cast<int>(static_cast<float>(textureSize.getHeight()) * m_scale.getHeight());
+    m_rect.w = static_cast<float>(textureSize.getWidth()) * m_scale.getWidth();
+    m_rect.h = static_cast<float>(textureSize.getHeight()) * m_scale.getHeight();
 
     // Ignore currently set texture rect
     m_textureRectPtr = nullptr;
 }
 
-void Sprite::setCenter(const Positioni& center)
+void Spritef::setCenter(const Positionf& center)
 {
-    m_center = SDL_Point { .x = center.getX(), .y = center.getY() };
+    m_center = SDL_FPoint { .x = center.getX(), .y = center.getY() };
     m_centerPtr = &m_center;
 }
 }

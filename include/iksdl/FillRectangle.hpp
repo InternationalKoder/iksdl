@@ -39,7 +39,7 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief A filled rectangle that can be drawn
+/// \brief A filled rectangle that can be drawn using \c int coordinates
 ///
 /// \note When handling several filled rectangles with
 /// same color, prefer \c FillRectangleArray for better performance

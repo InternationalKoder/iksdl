@@ -26,8 +26,8 @@
 #include "iksdl/Drawable.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Color.hpp"
-#include "iksdl/iksdl_export.hpp"
 #include <SDL.h>
+#include <iterator>
 #include <vector>
 
 namespace iksdl
@@ -44,7 +44,8 @@ namespace iksdl
 ///
 /// \see Point
 /////////////////////////////////////////////////
-class PointArray : public Drawable
+template<DrawablePosition T>
+class BasePointArray : public Drawable
 {
     public:
 
@@ -53,7 +54,9 @@ class PointArray : public Drawable
         ///
         /// \param color Drawing color for all the points
         /////////////////////////////////////////////////
-        IKSDL_EXPORT explicit PointArray(Color color);
+        explicit BasePointArray(Color color) :
+            m_color(std::move(color))
+        {}
 
         /////////////////////////////////////////////////
         /// \brief Constructor to define a populated array
@@ -61,26 +64,31 @@ class PointArray : public Drawable
         /// \param positions Position of the points to draw
         /// \param color     Drawing color for all the points
         /////////////////////////////////////////////////
-        IKSDL_EXPORT PointArray(const std::vector<Positioni>& positions, Color color);
+        BasePointArray(const std::vector<T>& positions, Color color) :
+            m_color(std::move(color))
+        {
+            m_points.reserve(positions.size());
+            std::transform(positions.begin(), positions.end(), std::back_inserter(m_points), BasePointArray::positionToSdl);
+        }
 
         /////////////////////////////////////////////////
         /// \brief Add a new point at the end of the array
         ///
         /// \param position Position for the new point to draw
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void pushBack(const Positioni& position) { m_points.push_back(positionToSdl(position)); }
+        inline void pushBack(const T& position) { m_points.push_back(positionToSdl(position)); }
 
         /////////////////////////////////////////////////
         /// \brief Remove the last point from the array
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void popBack() { m_points.pop_back(); }
+        inline void popBack() { m_points.pop_back(); }
 
         /////////////////////////////////////////////////
         /// \brief Remove a point at the given array index
         ///
         /// \param index Array index of the point to remove
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void remove(size_t index) { m_points.erase(m_points.begin() + index); }
+        inline void remove(size_t index) { m_points.erase(m_points.begin() + index); }
 
         /////////////////////////////////////////////////
         /// \brief Get the position of the point at the given array index
@@ -89,7 +97,7 @@ class PointArray : public Drawable
         ///
         /// \return Position of the point at the given array index
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Positioni operator[](size_t index) const { return Positioni(m_points[index].x, m_points[index].y); }
+        inline T operator[](size_t index) const { return T(m_points[index].x, m_points[index].y); }
 
         /////////////////////////////////////////////////
         /// \brief setChange the position of the point at the given array index
@@ -97,39 +105,55 @@ class PointArray : public Drawable
         /// \param index    Array index of the point to change
         /// \param position New position
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(size_t index, const Positioni position) { m_points[index] = positionToSdl(position); }
+        inline void setPosition(size_t index, const T position) { m_points[index] = positionToSdl(position); }
 
         /////////////////////////////////////////////////
         /// \brief Change the drawing color of all the points
         ///
         /// \param color New drawing color
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setColor(Color color) { m_color = std::move(color); }
+        inline void setColor(Color color) { m_color = std::move(color); }
 
         /////////////////////////////////////////////////
         /// \brief Draw all the points
         ///
         /// \param renderer Renderer that will handle the drawing
         /////////////////////////////////////////////////
-        IKSDL_EXPORT virtual void draw(SDL_Renderer* const renderer) const;
+        virtual void draw(SDL_Renderer* const renderer) const
+        {
+            SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
+
+            if constexpr(std::is_same_v<T, Positioni>)
+                SDL_RenderDrawPoints(renderer, m_points.data(), static_cast<int>(m_points.size()));
+            else
+                SDL_RenderDrawPointsF(renderer, m_points.data(), static_cast<int>(m_points.size()));
+        }
 
     private:
 
+        typedef std::conditional_t<
+            std::is_same_v<T, Positioni>,
+            SDL_Point,
+            SDL_FPoint> CondSDL_Point;
+
         /////////////////////////////////////////////////
-        /// \brief Transform a \a iksdl::Positioni to a \a SDL_Point
+        /// \brief Transform a \a iksdl::Position to a \a SDL_Point
         ///
         /// \param position Position to transform
         ///
         /// \return Same position in the SDL structure
         /////////////////////////////////////////////////
-        static inline SDL_Point positionToSdl(const Positioni& position)
+        static inline CondSDL_Point positionToSdl(const T& position)
         {
-            return SDL_Point({ .x = position.getX(), .y = position.getY() });
+            return CondSDL_Point({ .x = position.getX(), .y = position.getY() });
         }
 
-        std::vector<SDL_Point> m_points; ///< Array of points
-        Color m_color;                   ///< Drawing color
+        std::vector<CondSDL_Point> m_points; ///< Array of points
+        Color m_color;                       ///< Drawing color
 };
+
+using PointArray  = BasePointArray<Positioni>; ///< Array of points using \c int coordinates
+using PointArrayf = BasePointArray<Positionf>; ///< Array of points using \c float coordinates
 
 }
 

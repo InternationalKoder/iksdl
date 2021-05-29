@@ -44,7 +44,7 @@ class Text;
 class Renderer
 {
     friend class Texture;
-    friend class Text;
+    friend class BaseText;
 
     public:
 

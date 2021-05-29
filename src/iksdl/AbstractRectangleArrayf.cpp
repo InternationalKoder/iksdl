@@ -20,25 +20,19 @@
  *
  */
 
-#include "iksdl/PointArray.hpp"
+#include "iksdl/AbstractRectangleArrayf.hpp"
 #include <iterator>
 
 namespace iksdl
 {
-PointArray::PointArray(Color color) :
+AbstractRectangleArrayf::AbstractRectangleArrayf(Color color) :
     m_color(std::move(color))
 {}
 
-PointArray::PointArray(const std::vector<Positioni>& positions, Color color) :
+AbstractRectangleArrayf::AbstractRectangleArrayf(const std::vector<Rectf>& rects, Color color) :
     m_color(std::move(color))
 {
-    m_points.reserve(positions.size());
-    std::transform(positions.begin(), positions.end(), std::back_inserter(m_points), PointArray::positionToSdl);
-}
-
-void PointArray::draw(SDL_Renderer* const renderer) const
-{
-    SDL_SetRenderDrawColor(renderer, m_color.getRed(), m_color.getGreen(), m_color.getBlue(), m_color.getAlpha());
-    SDL_RenderDrawPoints(renderer, m_points.data(), static_cast<int>(m_points.size()));
+    m_rects.reserve(rects.size());
+    std::transform(rects.begin(), rects.end(), std::back_inserter(m_rects), AbstractRectangleArrayf::rectToSdl);
 }
 }

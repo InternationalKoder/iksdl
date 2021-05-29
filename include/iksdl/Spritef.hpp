@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_SPRITE_HPP
-#define IKSDL_SPRITE_HPP
+#ifndef IKSDL_SPRITEF_HPP
+#define IKSDL_SPRITEF_HPP
 
 #include "iksdl/BaseSprite.hpp"
 #include "iksdl/Position.hpp"
@@ -33,10 +33,12 @@
 namespace iksdl
 {
 
+class Texture;
+
 /////////////////////////////////////////////////
-/// \brief An image that can be drawn using \c int coordinates
+/// \brief An image that can be drawn using \c float coordinates
 /////////////////////////////////////////////////
-class Sprite : public BaseSprite
+class Spritef : public BaseSprite
 {
     public:
 
@@ -48,7 +50,7 @@ class Sprite : public BaseSprite
         /// \param texture  Texture containing the image data to draw
         /// \param position Position where the sprite will be drawn (top-left corner)
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Sprite(const Texture& texture, const Positioni& position);
+        IKSDL_EXPORT Spritef(const Texture& texture, const Positionf& position);
 
         /////////////////////////////////////////////////
         /// \brief Constructor that uses only a part of the texture
@@ -59,7 +61,7 @@ class Sprite : public BaseSprite
         /// \param position    Position where the sprite will be drawn (top-left corner)
         /// \param textureRect Part of the texture to draw for this sprite
         /////////////////////////////////////////////////
-        IKSDL_EXPORT Sprite(const Texture& texture, const Positioni& position, const Recti& textureRect);
+        IKSDL_EXPORT Spritef(const Texture& texture, const Positionf& position, const Recti& textureRect);
 
         /////////////////////////////////////////////////
         /// \brief Move the sprite to another position
@@ -70,7 +72,7 @@ class Sprite : public BaseSprite
         ///
         /// \see setPosition
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void move(const Positioni& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
+        IKSDL_EXPORT inline void move(const Positionf& delta) { m_rect.x += delta.getX(); m_rect.y += delta.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the size by using a scale factor
@@ -93,21 +95,21 @@ class Sprite : public BaseSprite
         ///
         /// \return Current position and size
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Recti getRect() const { return Recti(m_rect.x, m_rect.y, m_rect.w, m_rect.h); }
+        IKSDL_EXPORT inline Rectf getRect() const { return Rectf(m_rect.x, m_rect.y, m_rect.w, m_rect.h); }
 
         /////////////////////////////////////////////////
         /// \brief Get the position
         ///
         /// \return Current position
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Positioni getPosition() const { return Positioni(m_rect.x, m_rect.y); }
+        IKSDL_EXPORT inline Positionf getPosition() const { return Positionf(m_rect.x, m_rect.y); }
 
         /////////////////////////////////////////////////
         /// \brief Get the size
         ///
         /// \return Current size
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline Sizei getSize() const { return Sizei(m_rect.w, m_rect.h); }
+        IKSDL_EXPORT inline Sizef getSize() const { return Sizef(m_rect.w, m_rect.h); }
 
         /////////////////////////////////////////////////
         /// \brief Change the position of the sprite
@@ -118,7 +120,7 @@ class Sprite : public BaseSprite
         ///
         /// \see move
         /////////////////////////////////////////////////
-        IKSDL_EXPORT inline void setPosition(const Positioni& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
+        IKSDL_EXPORT inline void setPosition(const Positionf& position) { m_rect.x = position.getX(); m_rect.y = position.getY(); }
 
         /////////////////////////////////////////////////
         /// \brief Change the part of texture to draw
@@ -141,12 +143,12 @@ class Sprite : public BaseSprite
         ///
         /// \param center New center point for rotations
         /////////////////////////////////////////////////
-        IKSDL_EXPORT void setCenter(const Positioni& center);
+        IKSDL_EXPORT void setCenter(const Positionf& center);
 
         /////////////////////////////////////////////////
         /// \brief Use the full texture to draw the sprite
         /////////////////////////////////////////////////
-        IKSDL_EXPORT void resetTextureRect();
+        IKSDL_EXPORT virtual void resetTextureRect();
 
         /////////////////////////////////////////////////
         /// \brief Change the rotation center point to default
@@ -155,12 +157,12 @@ class Sprite : public BaseSprite
 
     private:
 
-        SDL_Rect m_rect; ///< Position and size of the sprite
+        SDL_FRect m_rect; ///< Position and size of the sprite
 
-        SDL_Point m_center;     ///< Rotation center point
-        SDL_Point* m_centerPtr; ///< Pointer to rotation center point, or nullptr to use default center
+        SDL_FPoint m_center;     ///< Rotation center point
+        SDL_FPoint* m_centerPtr; ///< Pointer to rotation center point, or nullptr to use default center
 };
 
 }
 
-#endif // IKSDL_SPRITE_HPP
+#endif // IKSDL_SPRITEF_HPP

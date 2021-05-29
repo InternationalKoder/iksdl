@@ -26,7 +26,6 @@
 #include "iksdl/common.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Size.hpp"
-#include "iksdl/iksdl_export.hpp"
 #include <algorithm>
 
 namespace iksdl

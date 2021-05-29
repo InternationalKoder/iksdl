@@ -20,10 +20,10 @@
  *
  */
 
-#ifndef IKSDL_RECTANGLE_ARRAY_HPP
-#define IKSDL_RECTANGLE_ARRAY_HPP
+#ifndef IKSDL_FILL_RECTANGLEF_HPP
+#define IKSDL_FILL_RECTANGLEF_HPP
 
-#include "iksdl/AbstractRectangleArray.hpp"
+#include "iksdl/AbstractRectanglef.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Size.hpp"
 #include "iksdl/Rect.hpp"
@@ -39,18 +39,21 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief An array of rectangles that can be drawn using \c int coordinates
+/// \brief A filled rectangle that can be drawn using \c float coordinates
 ///
-/// \see Rectangle
+/// \note When handling several filled rectangles with
+/// same color, prefer \c FillRectangleArray for better performance
+///
+/// \see FillRectangleArray, Rectangle
 /////////////////////////////////////////////////
-class RectangleArray : public AbstractRectangleArray
+class FillRectanglef : public AbstractRectanglef
 {
-    using AbstractRectangleArray::AbstractRectangleArray;
+    using AbstractRectanglef::AbstractRectanglef;
 
     public:
 
         /////////////////////////////////////////////////
-        /// \brief Draw all the rectangles
+        /// \brief Draw the filled rectangle
         ///
         /// \param renderer Renderer that will handle the drawing
         /////////////////////////////////////////////////
@@ -59,4 +62,4 @@ class RectangleArray : public AbstractRectangleArray
 
 }
 
-#endif // IKSDL_RECTANGLE_ARRAY_HPP
+#endif // IKSDL_FILL_RECTANGLEF_HPP

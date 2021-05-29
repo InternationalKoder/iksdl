@@ -42,7 +42,7 @@ class Text;
 /////////////////////////////////////////////////
 class Font
 {
-    friend class Text;
+    friend class BaseText;
 
     public:
 

@@ -43,7 +43,7 @@ class Renderer;
 class Texture
 {
     friend class Sprite;
-    friend class Text;
+    friend class Spritef;
 
     public:
 

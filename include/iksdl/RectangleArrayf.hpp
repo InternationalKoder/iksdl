@@ -20,10 +20,10 @@
  *
  */
 
-#ifndef IKSDL_RECTANGLE_ARRAY_HPP
-#define IKSDL_RECTANGLE_ARRAY_HPP
+#ifndef IKSDL_RECTANGLE_ARRAYF_HPP
+#define IKSDL_RECTANGLE_ARRAYF_HPP
 
-#include "iksdl/AbstractRectangleArray.hpp"
+#include "iksdl/AbstractRectangleArrayf.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Size.hpp"
 #include "iksdl/Rect.hpp"
@@ -39,13 +39,13 @@ namespace iksdl
 {
 
 /////////////////////////////////////////////////
-/// \brief An array of rectangles that can be drawn using \c int coordinates
+/// \brief An array of rectangles that can be drawn using \c float coordinates
 ///
 /// \see Rectangle
 /////////////////////////////////////////////////
-class RectangleArray : public AbstractRectangleArray
+class RectangleArrayf : public AbstractRectangleArrayf
 {
-    using AbstractRectangleArray::AbstractRectangleArray;
+    using AbstractRectangleArrayf::AbstractRectangleArrayf;
 
     public:
 
@@ -59,4 +59,4 @@ class RectangleArray : public AbstractRectangleArray
 
 }
 
-#endif // IKSDL_RECTANGLE_ARRAY_HPP
+#endif // IKSDL_RECTANGLE_ARRAYF_HPP

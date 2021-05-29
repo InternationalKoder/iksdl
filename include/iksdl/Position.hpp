@@ -24,7 +24,6 @@
 #define IKSDL_POSITION_HPP
 
 #include "iksdl/common.hpp"
-#include "iksdl/iksdl_export.hpp"
 
 namespace iksdl
 {
@@ -134,6 +133,9 @@ using Positionu = Position<unsigned int>; ///< Position using \c unsigned \c int
 using Positionl = Position<long>;         ///< Position using \c long type
 using Positionf = Position<float>;        ///< Position using \c float type
 using Positiond = Position<double>;       ///< Position using \c double type
+
+template<typename T>
+concept DrawablePosition = std::is_same_v<T, Positioni> || std::is_same_v<T, Positionf>;
 
 }
 

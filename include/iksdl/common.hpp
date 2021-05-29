@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_CONCEPTS_HPP
-#define IKSDL_CONCEPTS_HPP
+#ifndef IKSDL_COMMON_HPP
+#define IKSDL_COMMON_HPP
 
 #include <type_traits>
 #include <utility>
@@ -62,4 +62,4 @@ inline bool comparePairKeys(const std::pair<K, V>& p1, const std::pair<K, V>& p2
 
 }
 
-#endif // IKSDL_CONCEPTS_HPP
+#endif // IKSDL_COMMON_HPP
