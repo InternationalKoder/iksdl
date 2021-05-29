@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('_point_8hpp.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">Point.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -93,20 +94,29 @@ $(document).ready(function(){initNavTree('_point_8hpp.html',''); initResizable()
 <div class="textblock"><code>#include &quot;<a class="el" href="_drawable_8hpp_source.html">iksdl/Drawable.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_position_8hpp_source.html">iksdl/Position.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_color_8hpp_source.html">iksdl/Color.hpp</a>&quot;</code><br />
-<code>#include &quot;iksdl/iksdl_export.hpp&quot;</code><br />
+<code>#include &lt;SDL.h&gt;</code><br />
 </div>
 <p><a href="_point_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_point.html">iksdl::Point</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A point that can be drawn.  <a href="classiksdl_1_1_point.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiksdl_1_1_base_point.html">iksdl::BasePoint&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A point that can be drawn.  <a href="classiksdl_1_1_base_point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceiksdl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html">iksdl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a62520612e3867d2091075996cfb275bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html#a62520612e3867d2091075996cfb275bc">iksdl::Point</a> = BasePoint&lt; Positioni &gt;</td></tr>
+<tr class="memdesc:a62520612e3867d2091075996cfb275bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point using <code>int</code> coordinates.  <a href="namespaceiksdl.html#a62520612e3867d2091075996cfb275bc">More...</a><br /></td></tr>
+<tr class="separator:a62520612e3867d2091075996cfb275bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6609a9f8c720ef85aed049f97ee3b8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceiksdl.html#a2c6609a9f8c720ef85aed049f97ee3b8">iksdl::Pointf</a> = BasePoint&lt; Positionf &gt;</td></tr>
+<tr class="memdesc:a2c6609a9f8c720ef85aed049f97ee3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point using <code>float</code> coordinates.  <a href="namespaceiksdl.html#a2c6609a9f8c720ef85aed049f97ee3b8">More...</a><br /></td></tr>
+<tr class="separator:a2c6609a9f8c720ef85aed049f97ee3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

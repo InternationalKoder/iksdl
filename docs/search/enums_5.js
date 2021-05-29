@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rendermode_669',['RenderMode',['../classiksdl_1_1_text.html#ad5defa4a731ca78f8b294a386f07917e',1,'iksdl::Text']]]
+  ['rendermode_761',['RenderMode',['../classiksdl_1_1_base_text.html#a6309de6d0656bcad957a68692ab81379',1,'iksdl::BaseText']]]
 ];

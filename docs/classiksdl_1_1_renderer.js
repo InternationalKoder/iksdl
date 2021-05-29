@@ -11,6 +11,6 @@ var classiksdl_1_1_renderer =
     [ "operator=", "classiksdl_1_1_renderer.html#a97a4e0d54ba529ddcc4dd6fd38b802bc", null ],
     [ "resetViewport", "classiksdl_1_1_renderer.html#aef0e2305e6174647fbfa860cbf76b24b", null ],
     [ "setViewport", "classiksdl_1_1_renderer.html#a63edbbc7c8a9ad4cc308176508eacf88", null ],
-    [ "Text", "classiksdl_1_1_renderer.html#aee0ad1dafe471596e6d25530d9fbaf0c", null ],
+    [ "BaseText", "classiksdl_1_1_renderer.html#ae8583d5be045cf947a57d9258055acd9", null ],
     [ "Texture", "classiksdl_1_1_renderer.html#af7f909106d08e36cd50aa58e36f9bf47", null ]
 ];

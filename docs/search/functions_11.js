@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['utility_619',['utility',['../classiksdl_1_1_window_options.html#aac29917588b5a8df15b844c4d0df93c0',1,'iksdl::WindowOptions']]]
+  ['vsync_690',['vsync',['../classiksdl_1_1_renderer_options.html#a5d802a416b21f72525cd67aa0beaf288',1,'iksdl::RendererOptions']]],
+  ['vulkan_691',['vulkan',['../classiksdl_1_1_window_options.html#af2a6a2c64e27dc0bffa87c4a1207f221',1,'iksdl::WindowOptions']]]
 ];

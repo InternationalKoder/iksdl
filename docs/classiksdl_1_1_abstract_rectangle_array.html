@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classiksdl_1_1_abstract_rectangle_arra
 </div><!--header-->
 <div class="contents">
 
-<p>Gathers the common code related to the drawing of rectangle arrays.  
+<p>Gathers the common code related to the drawing of rectangle arrays using <code>int</code> coordinates.  
  <a href="classiksdl_1_1_abstract_rectangle_array.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_abstract_rectangle_array_8hpp_source.html">AbstractRectangleArray.hpp</a>&gt;</code></p>
@@ -103,8 +103,8 @@ Inheritance diagram for iksdl::AbstractRectangleArray:</div>
   <img src="classiksdl_1_1_abstract_rectangle_array.png" usemap="#iksdl::AbstractRectangleArray_map" alt=""/>
   <map id="iksdl::AbstractRectangleArray_map" name="iksdl::AbstractRectangleArray_map">
 <area href="classiksdl_1_1_drawable.html" title="An entity than can be drawn." alt="iksdl::Drawable" shape="rect" coords="94,0,273,24"/>
-<area href="classiksdl_1_1_fill_rectangle_array.html" title="An array of filled rectangles that can be drawn." alt="iksdl::FillRectangleArray" shape="rect" coords="0,112,179,136"/>
-<area href="classiksdl_1_1_rectangle_array.html" title="An array of rectangles that can be drawn." alt="iksdl::RectangleArray" shape="rect" coords="189,112,368,136"/>
+<area href="classiksdl_1_1_fill_rectangle_array.html" title="An array of filled rectangles that can be drawn using int coordinates." alt="iksdl::FillRectangleArray" shape="rect" coords="0,112,179,136"/>
+<area href="classiksdl_1_1_rectangle_array.html" title="An array of rectangles that can be drawn using int coordinates." alt="iksdl::RectangleArray" shape="rect" coords="189,112,368,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -161,7 +161,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8142d9516125a92368d8eb780be85d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Gathers the common code related to the drawing of rectangle arrays. </p>
+<div class="textblock"><p>Gathers the common code related to the drawing of rectangle arrays using <code>int</code> coordinates. </p>
 <p>This is the recommended approach when drawing several rectangles. It is faster than drawing all the rectangles individually, since only one single call is made to draw all the rectangles.</p>
 <dl class="section warning"><dt>Warning</dt><dd>All the rectangles in the array are drawn with the same color </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

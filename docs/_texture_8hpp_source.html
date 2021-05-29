@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IKSDL
-   &#160;<span id="projectnumber">1.0</span>
+   &#160;<span id="projectnumber">1.1</span>
    </div>
    <div id="projectbrief">C++ wrapper for SDL 2 library</div>
   </td>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('_texture_8hpp_source.html',''); initRe
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classiksdl_1_1_texture.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiksdl_1_1_texture.html">Texture</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classiksdl_1_1_texture.html#a3292175d54d93d126ba2829249316344">   45</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiksdl_1_1_sprite.html">Sprite</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classiksdl_1_1_texture.html#aee0ad1dafe471596e6d25530d9fbaf0c">   46</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiksdl_1_1_text.html">Text</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classiksdl_1_1_texture.html#aa5a287dfc0c6cf96c6cd42c5a69b4423">   46</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classiksdl_1_1_spritef.html">Spritef</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
@@ -174,8 +174,8 @@ $(document).ready(function(){initNavTree('_texture_8hpp_source.html',''); initRe
 <div class="ttc" id="aclassiksdl_1_1_color_html_aa352eea89ff343b108c1fb48a56a0265"><div class="ttname"><a href="classiksdl_1_1_color.html#aa352eea89ff343b108c1fb48a56a0265">iksdl::Color::getRed</a></div><div class="ttdeci">constexpr uint8_t getRed() const</div><div class="ttdoc">Get the red component.</div><div class="ttdef"><b>Definition:</b> Color.hpp:130</div></div>
 <div class="ttc" id="aclassiksdl_1_1_renderer_html"><div class="ttname"><a href="classiksdl_1_1_renderer.html">iksdl::Renderer</a></div><div class="ttdoc">Component that is able to draw entities using hardware acceleation.</div><div class="ttdef"><b>Definition:</b> Renderer.hpp:45</div></div>
 <div class="ttc" id="aclassiksdl_1_1_size_html"><div class="ttname"><a href="classiksdl_1_1_size.html">iksdl::Size&lt; int &gt;</a></div></div>
-<div class="ttc" id="aclassiksdl_1_1_sprite_html"><div class="ttname"><a href="classiksdl_1_1_sprite.html">iksdl::Sprite</a></div><div class="ttdoc">An image that can be drawn.</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:41</div></div>
-<div class="ttc" id="aclassiksdl_1_1_text_html"><div class="ttname"><a href="classiksdl_1_1_text.html">iksdl::Text</a></div><div class="ttdoc">A text that can be drawn.</div><div class="ttdef"><b>Definition:</b> Text.hpp:53</div></div>
+<div class="ttc" id="aclassiksdl_1_1_sprite_html"><div class="ttname"><a href="classiksdl_1_1_sprite.html">iksdl::Sprite</a></div><div class="ttdoc">An image that can be drawn using int coordinates.</div><div class="ttdef"><b>Definition:</b> Sprite.hpp:40</div></div>
+<div class="ttc" id="aclassiksdl_1_1_spritef_html"><div class="ttname"><a href="classiksdl_1_1_spritef.html">iksdl::Spritef</a></div><div class="ttdoc">An image that can be drawn using float coordinates.</div><div class="ttdef"><b>Definition:</b> Spritef.hpp:42</div></div>
 <div class="ttc" id="aclassiksdl_1_1_texture_html"><div class="ttname"><a href="classiksdl_1_1_texture.html">iksdl::Texture</a></div><div class="ttdoc">Holds image data.</div><div class="ttdef"><b>Definition:</b> Texture.hpp:44</div></div>
 <div class="ttc" id="aclassiksdl_1_1_texture_html_a02f17ef9a01e347e192ed4cf72c6c6c2"><div class="ttname"><a href="classiksdl_1_1_texture.html#a02f17ef9a01e347e192ed4cf72c6c6c2">iksdl::Texture::Texture</a></div><div class="ttdeci">IKSDL_EXPORT Texture(const Renderer &amp;renderer, const std::string &amp;filePath, const Color &amp;colorKey)</div><div class="ttdoc">Constructor loading the texture from a file and interpret a specific color as transparent.</div></div>
 <div class="ttc" id="aclassiksdl_1_1_texture_html_a0991eb081a661d12d5f82814aef8fac2"><div class="ttname"><a href="classiksdl_1_1_texture.html#a0991eb081a661d12d5f82814aef8fac2">iksdl::Texture::setAlphaBlending</a></div><div class="ttdeci">IKSDL_EXPORT void setAlphaBlending(uint8_t alpha) const</div><div class="ttdoc">Blend the texture with transparency.</div><div class="ttdef"><b>Definition:</b> Texture.hpp:120</div></div>
