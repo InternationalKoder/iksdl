@@ -23,7 +23,6 @@
 #ifndef IKSDL_LINE_HPP
 #define IKSDL_LINE_HPP
 
-#include "iksdl/common.hpp"
 #include "iksdl/Drawable.hpp"
 #include "iksdl/Position.hpp"
 #include "iksdl/Color.hpp"

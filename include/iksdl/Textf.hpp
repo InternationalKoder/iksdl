@@ -20,8 +20,8 @@
  *
  */
 
-#ifndef IKSDL_TEXT_F_HPP
-#define IKSDL_TEXT_F_HPP
+#ifndef IKSDL_TEXTF_HPP
+#define IKSDL_TEXTF_HPP
 
 #include "iksdl/BaseText.hpp"
 #include "iksdl/Position.hpp"
@@ -187,4 +187,4 @@ class Textf : public BaseText
 
 }
 
-#endif // IKSDL_TEXT_F_HPP
+#endif // IKSDL_TEXTF_HPP

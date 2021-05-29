@@ -135,7 +135,7 @@ class AbstractRectanglef : public Drawable
     protected:
 
         SDL_FRect m_rect; ///< Position and size
-        Color m_color;   ///< Drawing color
+        Color m_color;    ///< Drawing color
 };
 
 }
